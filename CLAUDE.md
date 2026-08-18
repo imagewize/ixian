@@ -207,5 +207,5 @@ one large commit bundling unrelated changes. Makes history easier to review and 
 - `templates/*.html` — FSE templates, including WooCommerce single-product/archive-product
 - `parts/header.html`, `parts/footer.html` — template parts
 - `styles/*.json` — style variations
-- `assets/logos/` — rose logo mark (SVG, adapted from Lucide, ISC License)
+- `assets/logos/` — robot logo mark (`ixian-robot.svg`, Font Awesome Free 6.7.2, CC BY 4.0 via Blade Icons; attribution in `readme.txt`)
 - `composer.json` / `phpcs.xml` — PHP lint/coding-standards tooling

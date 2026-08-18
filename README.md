@@ -1,67 +1,81 @@
 <p align="center">
-  <img src="assets/logos/ixian-rose-primary.svg" alt="Ixian Logo" width="128" height="128">
+  <img src="assets/logos/ixian-robot.svg" alt="Ixian Logo" width="128">
 </p>
 <div align="center">
 <h1>Ixian</h1>
 
-A lean full-site-editing theme for WooCommerce stores.
+A lean full-site-editing theme for service businesses and SaaS companies.
 </div>
 
 ## Description
 
-Ixian is a full-site-editing (FSE) WordPress theme for WooCommerce stores, built as a general-purpose e-commerce base for small and medium businesses. Unlike Imagewize's [Elayne](https://github.com/imagewize/elayne) theme, it ships **no bundled patterns** — `theme.json`, WooCommerce block templates, and style variations provide the design system, and pages are composed directly from blocks.
+Ixian is a full-site-editing (FSE) WordPress theme aimed at service businesses and SaaS companies. `theme.json` and style variations provide the design system; page content is composed from blocks rather than from a large bundled pattern library.
 
-Ixian pairs with the [Aludra](https://github.com/imagewize/aludra) block library (mega menu, carousel, FAQ tabs, and more), but doesn't require it — the theme is a plain block theme that works with core blocks and any block plugin.
+**Ixian is forked from [Aviendha](https://github.com/imagewize/aviendha).** It takes Aviendha 1.15.0 as its starting point — the `theme.json` design system, block templates, template parts and the `twilight` style variation all come from there — and re-aims it from e-commerce at service and SaaS sites. Aviendha is treated the way Sage is: a versioned base you clone and own. Fixes made to Aviendha do not flow here automatically.
 
-> **Lineage:** Ixian is a companion theme to Imagewize's [Elayne](https://github.com/imagewize/elayne) and [Nynaeve](https://github.com/imagewize/nynaeve) themes. Like Elayne, it ships no custom blocks of its own — content blocks come from the shared [Aludra](https://github.com/imagewize/aludra) plugin, per WordPress.org's theme-review rules. (Nynaeve is a separate case: it registers its own blocks and doesn't use Aludra.)
+**Like Aviendha, Ixian uses [Aludra](https://github.com/imagewize/aludra) for its blocks.** Neither theme registers custom blocks of its own — content blocks come from the shared Aludra plugin (mega menu, carousel, FAQ tabs, pricing tiers, feature cards, and more), which is what WordPress.org's theme-review rules ask for. Aludra is shared across Imagewize's themes, so block and icon work done there benefits Aviendha, [Elayne](https://github.com/imagewize/elayne) and Ixian alike. ([Nynaeve](https://github.com/imagewize/nynaeve) is the exception: it registers its own blocks and does not use Aludra.)
+
+Aludra is recommended but not required — without it Ixian is a plain block theme that works with core blocks.
 
 ## Requirements
 
 - WordPress 6.6+
 - PHP 8.0+
-- WooCommerce (for store templates)
-- Aludra plugin (recommended, not required)
+- [Aludra](https://github.com/imagewize/aludra) plugin (recommended, not required)
+- WooCommerce (only if you want the store templates)
+
+## Installation
+
+```bash
+composer require imagewize/ixian
+```
+
+On a Bedrock site this installs to `web/app/themes/ixian` via `installer-paths`. Otherwise, download a release zip and install it under **Appearance → Themes → Add New**.
 
 ## Features
 
-- **Design system** — `theme.json` defines the color palette, typography, spacing, and border radii; color/spacing slugs match what Aludra's own block styles and patterns expect (`base`, `contrast`, `secondary`, `main`, `primary`, `accent`, `tertiary`, `border-light`).
-- **WooCommerce templates** — `templates/single-product.html`, `templates/archive-product.html`, `templates/product-search-results.html`, and `templates/coming-soon.html` are theme-provided; cart, checkout, and category-archive templates fall back to WooCommerce's own block-theme defaults. The product archive and search results ship a results count, catalog sorting, a filters sidebar (price, category, availability, rating) and an empty state; the single product template uses the block-based add to cart, with theme layouts for simple and variable products in `parts/`. The coming-soon template wraps WooCommerce's coming-soon block with the theme's header and footer.
-- **Degrades without WooCommerce** — with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. WooCommerce's own bundled patterns are unregistered when it *is* active, keeping the inserter consistent with the theme's no-patterns design.
-- **Two page templates** — `page.html` (default) omits `post-title` since most pages get their title from a block's own heading; `page-with-title.html` (selectable per-page under Page → Template) adds the conventional title treatment.
-- **Style variations** — see `styles/` (e.g. `twilight.json`) for alternate color palettes on top of the same design system.
-- **No patterns** — block-first composition. Insert `aludra/*` blocks (or core blocks) directly into pages and templates.
+- **Design system** — `theme.json` defines the colour palette, typography, spacing and border radii. The colour and spacing slugs match what Aludra's block styles expect (`base`, `contrast`, `secondary`, `main`, `primary`, `accent`, `tertiary`, `border-light`), so Aludra blocks pick up the theme's colours without configuration.
+- **Style variations** — see `styles/` (e.g. `twilight.json`) for alternate palettes on top of the same design system.
+- **Two page templates** — `page.html` (default) omits `post-title`, since most pages get their title from a block's own heading; `page-with-title.html` (selectable per page under **Page → Template**) adds the conventional title treatment.
+- **WooCommerce, dormant by default** — the theme ships store templates (`single-product`, `archive-product`, `product-search-results`, `coming-soon`) plus add-to-cart layouts in `parts/`. All of it is guarded by `class_exists( 'WooCommerce' )`: with the plugin inactive, the store templates and the header's mini cart are filtered out rather than left to render as unsupported blocks. A site that never installs WooCommerce pays nothing for them.
+- **No JS build step** — the theme ships no bundled JavaScript.
 
 ## Structure
 
 ```
 ixian/
-├── style.css          # Theme header (metadata only)
-├── theme.json          # Design system: color, typography, spacing, layout
-├── functions.php       # Theme setup, 'menu' template part area, WooCommerce hooks
-├── templates/          # FSE templates (index, single, page, page-with-title, archive, search, 404, WooCommerce: single-product, archive-product, product-search-results, coming-soon)
-├── parts/               # header.html, header-dark.html, footer.html, add-to-cart layouts
-├── styles/              # Style variations
+├── style.css           # Theme header and the CSS theme.json cannot express
+├── theme.json          # Design system: colour, typography, spacing, layout
+├── functions.php       # Theme setup, 'menu' template part area, WooCommerce guards
+├── templates/          # FSE templates (index, single, page, page-with-title,
+│                       #   archive, search, 404, plus WooCommerce store templates)
+├── parts/              # header.html, header-dark.html, footer.html, add-to-cart layouts
+├── styles/             # Style variations
 ├── assets/
-│   ├── logos/           # Rose logo mark (SVG)
-│   └── css/             # WooCommerce override stylesheet (enqueued conditionally)
-├── docs/                # Contributor notes (not shipped in the theme zip)
-└── languages/           # Translations (text domain: ixian)
+│   ├── logos/          # Logo mark (SVG)
+│   ├── fonts/          # Bricolage Grotesque, JetBrains Mono (variable, self-hosted)
+│   └── css/            # WooCommerce override stylesheet (enqueued conditionally)
+└── languages/          # Translations (text domain: ixian)
 ```
+
+Planning documents and design mockups live in the private `imagewize.com` repo under `docs/ixian/`, not here.
 
 ## Theme Integration for Aludra
 
-The Aludra mega-menu block requires its host theme to register a `menu` template part area. Ixian does this in `functions.php` via the `default_wp_template_part_areas` filter, so mega menu template parts created in the Site Editor appear under **Appearance → Editor → Patterns → Template Parts → Menus**.
+Aludra's mega-menu block requires its host theme to register a `menu` template part area. Ixian does this in `functions.php` via the `default_wp_template_part_areas` filter, so mega menu template parts created in the Site Editor appear under **Appearance → Editor → Patterns → Template Parts → Menus**.
 
 ## Development
 
 ```bash
 composer install
-composer run lint       # php-parallel-lint syntax check
+composer run lint        # php-parallel-lint syntax check
 composer run wpcs:scan   # PHPCS against phpcs.xml
 composer run wpcs:fix    # PHPCBF auto-fix
 ```
 
-No JS build step is required — the theme ships no bundled JavaScript.
+## Credits
+
+The logo mark is the Font Awesome Free 6.7.2 "robot" icon (CC BY 4.0), obtained via [Blade Icons](https://blade-ui-kit.com/blade-icons/fas-robot) (MIT). Fonts are Bricolage Grotesque and JetBrains Mono, both SIL OFL 1.1. Full attributions are in `readme.txt` under **Third-Party Libraries**.
 
 ## License
 

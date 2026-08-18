@@ -10,14 +10,19 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 == Description ==
 
-Ixian is a lean full-site-editing theme for WooCommerce stores. Unlike Imagewize's Elayne theme,
-it ships no bundled patterns — `theme.json`, WooCommerce block templates, and style variations
-provide the design system, and page content is composed directly from blocks. It works with any
-blocks, but is built to pair with the [Aludra](https://github.com/imagewize/aludra) block library
-(mega menu, carousel, FAQ tabs, and more).
+Ixian is a lean full-site-editing theme for service businesses and SaaS companies. A design
+system in `theme.json` plus style variations provide the foundation, and page content is composed
+from blocks rather than from a large bundled pattern library.
 
-Ixian recommends, but does not require, the Aludra plugin. It requires WooCommerce for the
-store templates.
+Ixian is forked from Imagewize's [Aviendha](https://github.com/imagewize/aviendha) theme and
+inherits its design system, block templates and template parts, re-aimed from e-commerce at
+service and SaaS sites. Like Aviendha, it ships no custom blocks of its own — content blocks come
+from the shared [Aludra](https://github.com/imagewize/aludra) plugin (mega menu, carousel, FAQ
+tabs, and more), per WordPress.org's theme-review rules.
+
+Ixian recommends, but does not require, the Aludra plugin; without it the theme is a plain block
+theme that works with core blocks. WooCommerce is required only for the store templates, which
+stay dormant when it is not active.
 
 = Key Features =
 
@@ -37,136 +42,30 @@ store templates.
 
 == Changelog ==
 
-= 1.15.0 =
-* Added: a `control-border` design token at 3:1 against the page, so form controls have a boundary that can actually be seen — the shop filter checkboxes, sort dropdown, price slider inputs, and comment form fields all used a hairline that was 1.25:1 against the background (WCAG 2.1 AA, 1.4.11)
-* Changed: `main-accent` darkened from #78716C to #6F6862, clearing the 4.5:1 minimum for body text on form labels, placeholders, post meta, and struck-through sale prices (WCAG 2.1 AA, 1.4.3)
-* Changed: the comment form fields and the catalog sort dropdown now draw a real 2px focus ring instead of swapping a 1px border colour, so keyboard focus is visible on both (WCAG 2.1 AA, 2.4.7)
-
-= 1.14.0 =
-* Added: product cards across the shop archive, search results, and single-product related products now sit in a bordered, rounded card whose border darkens on hover — one visual treatment for "a clickable item in a grid"
-* Added: the shop sidebar's filter headings (Price, Category, Availability, Rating) use the theme's mono eyebrow style, and a hairline now separates each filter group
-* Changed: the results count reads in the same muted secondary colour as the breadcrumb above it
-* Changed: the catalog sort dropdown is now styled to match the theme instead of rendering as a bare browser control
-
-= 1.13.0 =
-* Changed: the theme's wide width is now 1360px rather than 1200px, so the shop archive's three product columns are no longer squeezed by the filter sidebar
-* Added: the product grid uses the theme's spacing scale for its gaps instead of WooCommerce's hardcoded 20px, with wider gaps between rows than columns so rows no longer run together
-* Added: product cards pin their Add to cart button to the bottom, so buttons stay aligned when a title wraps to two lines
-* Added: an Indigo colour in the palette, giving the Blue product variations a colour that belongs to the theme
-
-= 1.12.0 =
-* Changed: the single post template is now a designed reading surface — a tinted title band (category eyebrow, title, lede, and a mono meta line of avatar, author, and date), a two-column layout with a sticky sidebar (Recent, Topics, and a call to action), a post tail with tag pills and an author card, a Related posts band, and restyled comments
-* Added: a reading-progress hairline under the header that fills as the post scrolls, using a CSS scroll timeline so the theme ships no JavaScript and the bar is simply absent where unsupported
-* Added: prose styling scoped to single posts — a display pull-quote, coloured list markers, and a drop cap on posts that open with a paragraph — plus a global rule that sits a heading close to the block it introduces
-* Note: post content now sits inside the reading column, so a post's full-width blocks fill the column rather than the viewport — a change from the previous full-width single
-* Note: related posts are the latest three by date, a core-only stand-in for true related-by-taxonomy posts
-
-= 1.11.0 =
-* Added: order-confirmation.html template wrapping WooCommerce's order-confirmation blocks with the theme's header and footer, so the highest-trust page in the funnel matches the rest of the site
-* Added: a customer-account icon in both the light and dark header, matching the cart, stripped alongside the mini cart on sites without WooCommerce
-* Fixed: the customer-account icon rendered invisibly — WooCommerce's own sizing rule targets a class the block doesn't emit, so the theme sizes the icon directly
-* Fixed: order-confirmation is filtered out of the Site Editor's template list on sites without WooCommerce
-
-= 1.10.0 =
-* Added: product-search-results.html template matching the archive layout for consistent search results
-* Added: coming-soon.html template wrapping WooCommerce's coming-soon block with header/footer and a centred launch message
-* Fixed: the footer no longer floats mid-viewport on the coming-soon template
-
-= 1.9.0 =
-* Added: the Page With Title template opens with a tinted title band, supplying the top spacing it lacked and giving the light header a tonal change to sit against
-* Added: the light header carries the same "Start a project" call to action as the dark one
-* Added: a wipe-in underline marks the current page in the navigation, on both headers
-* Added: a global block rhythm in `theme.json` — spacing between blocks and above headings now comes from the design system rather than per-block padding
-* Changed: the light header no longer draws a resting line beneath it; the edge appears once the page scrolls, with no JavaScript
-* Changed: the light header is sticky and takes the display-font wordmark, both of which were previously dark-header only
-* Changed: the navigation stays behind the hamburger until 1024px, so the masthead no longer wraps to two rows on a tablet
-* Fixed: the footer no longer floats mid-viewport on pages shorter than the window
-
-= 1.8.1 =
-* Fixed: the product archive's filter sidebar rendered in WooCommerce's stock greys — active-filter chips, checkboxes, the price slider, and the clear button now follow the theme's palette and radii in every style variation
-* Fixed: the price slider handle turned near-invisible on hover and focus under a dark style variation
-
-= 1.8.0 =
-* Changed: the single product page replaces WooCommerce's tab strip with stacked description, specifications, and reviews sections, each built from blocks the theme can style
-* Added: WooCommerce block styling in `theme.json` — prices, buttons, sale badges, the mini cart, filters, ratings, and summaries now follow the theme's palette and type in every style variation, including the dark one
-* Added: `assets/css/woocommerce.css` covers what `theme.json` cannot reach — the mini cart drawer, the classic product gallery, sale prices, the quantity stepper, the specifications table, and the review form
-* Added: an eyebrow label utility, used to mark the product page's sections
-* Added: a hover state on buttons
-* Fixed: the product page showed no SKU or tags, and no related products — both blocks were shipped without the inner blocks they need
-* Fixed: the mini cart drawer stayed white under a dark style variation, leaving light text on a white panel
-* Fixed: the sale flash on a product page was WooCommerce's green circle instead of the theme's badge, and a discounted product's old and new price were styled identically
-* Fixed: the add to cart button had no hover state
-
-= 1.7.0 =
-* Added: product filtering and sorting on the product archive — a results count and sorting bar, plus a sidebar with active-filter chips, price slider, category, availability, and rating filters
-* Added: breadcrumbs, term description, and an empty state on the product archive; a filtered archive matching no products previously rendered nothing at all
-* Added: theme add-to-cart layouts for simple and variable products, so the quantity stepper and variation chips use the theme's spacing instead of WooCommerce's defaults
-* Added: short product description and stock status on the single product template
-* Changed: the single product template uses WooCommerce's block-based add to cart instead of the legacy form, so the design system can style it
-* Changed: WooCommerce's bundled block patterns are unregistered, matching the theme's no-patterns design (the coming soon patterns are kept, since WooCommerce's own templates use them)
-* Fixed: the store templates and the header's mini cart no longer appear on sites without WooCommerce active
-* Fixed: discounted products showed two sale badges on the archive
-* Fixed: the archive heading sat indented from the product grid below it
-* Added: GitHub release workflow that attaches a theme zip to every published release, with a `.distignore` and matching `.gitattributes` keeping dev-only files out of the package
-* Added: CI checks matching Elayne's — PHPCS against the WordPress standard on every pull request, and the WordPress theme review action on pull requests and pushes to main
-* Fixed: `screenshot.png` was missing — WordPress requires every theme to ship one, and the new theme review check was the first thing to say so
-* Changed: demo-site syncing now uses a shared script kept outside the theme, so no development shell script ships in the repository
-* Fixed: `package.json` version drifted behind the theme version and now tracks it
-
-= 1.5.4 =
-* Change: footer navigation no longer collapses into a hamburger menu — it renders as a plain list at every width, stacking vertically under 600px
-
-= 1.5.3 =
-* Fixed: the dark header's mobile menu showed white text on a white overlay — the navigation block sets no background, so core paints the open overlay white while the block's `base` text color keeps the links and close button white. The override is scoped to the open menu only, since above 600px core reuses the same element for the inline desktop nav.
-* Change: organize `style.css` into numbered sections (template parts, header, footer) with a table of contents.
-
-= 1.5.2 =
-* Add: footer parity with the redesign mockup (Step 14) — `.foot` class with constrained layout, tertiary background, and a `.shell` inner group with flex layout matching the mockup's wrapped row
-* Fixed: the footer's constrained layout was never applied — same class of bug as 1.5.1's header fix, a stray `}` put the `layout` attribute outside the parsed JSON, so it rendered `is-layout-flow` and the branding/copyright sat flush against the viewport edges
-* Fixed: a visible gap between the last section and the footer — core's global styles add a 24px top margin to every top-level block, including the `wp-block-template-part` wrapper around header/footer, which a margin reset on the inner block couldn't reach; reset generally for all template parts
-* Fixed: the header CTA's text was invisible on hover — the button's `has-base-color` markup carries a core `!important` rule the hover state's color override couldn't beat
-
-= 1.5.1 =
-* Fixed: the 1.5.0 header styling was never live — `style.css`'s theme header comment was missing its closing `*/`, so every rule that release added sat inside the comment and was discarded by the parser
-* Fixed: the dark header now sits in the centered content shell — its layout attribute was nested inside the `style` object, so WordPress never applied the constrained layout and the wordmark/navigation stretched to the viewport edges
-* Fixed: sticky positioning now works — WordPress wraps a header-area template part in its own element that is exactly as tall as the header, leaving a sticky child no scroll range, so the wrapper is now sticky as well
-* Add: "Start a project" CTA button in the dark header, styled as a `mono` font pill, balancing the wordmark/navigation/button row against the redesign mockup
-* Change: drop the redundant `tagName` attribute from every header template-part invocation; the part already emits its own `<header>`
-
-= 1.5.0 =
-* Header parity: `header-dark` masthead is now sticky, its wordmark uses the `display` font family (Bricolage Grotesque, 800 weight, tightened letter-spacing), and the site logo is hidden in favor of the text wordmark. Homepage now uses the dark header instead of the light one.
-
-= 1.4.0 =
-* Add `xx-small`, `x-small`, `base`, and `display` font-size presets to `theme.json`, rounding the scale out to 9 named tiers (xx-small through display) matching the naming convention used by Ollie and Elayne, so blocks (Aludra) can reference a named size instead of hardcoding clamp()/rem/px values.
-* Change body text default font-size from `medium` to `base`, matching Ollie's/Elayne's convention where `base` is the body-text tier.
-
-= 1.3.0 =
-* Add `display` (Bricolage Grotesque) and `mono` (JetBrains Mono) font families to `theme.json`, self-hosted as variable-font woff2 files; headings now use `display`
-
-= 0.4.0 =
-* Add `page-with-title.html` custom template (selectable under Page → Template) for standard content pages that want the conventional post-title treatment.
-* `page.html` (default) no longer prints post-title, since most pages get their title from a block's own heading.
-
-= 0.3.0 =
-* Drive page/single content width and padding from theme.json's global spacing rule instead of alignwide, for consistent edge-to-edge padding.
-* Replace the Lucide rose icon with the Ionicons rose icon (via Blade Icons) as the theme's logo mark.
-
-= 0.2.0 =
-* Remove hardcoded Aludra block from header.html so the theme works with core blocks alone, as documented.
-
-= 0.1.0 =
-* Initial scaffold: theme.json design system, WooCommerce templates, style variation, rose logo mark.
+= 1.0.0 =
+* Initial release. Forked from Aviendha 1.15.0 and re-aimed at service businesses and SaaS companies.
+* Inherits the `theme.json` design system, block templates, template parts and the `twilight` style variation.
+* Renamed throughout: text domain, function prefixes, CSS class hooks, asset slugs and stylesheet handles.
+* New logo mark (Font Awesome Free "robot", see Third-Party Libraries below); Aviendha's rose mark removed.
+* WooCommerce templates retained, guarded so they stay dormant when WooCommerce is not active.
 
 == Third-Party Libraries ==
 
-= Ionicons (via Blade Icons) =
-* License: MIT License
-* Source: https://blade-ui-kit.com/blade-icons/ionicon-rose
-* License URI: https://github.com/driesvints/blade-icons/blob/main/LICENSE.md
-* Used in: `assets/logos/ixian-rose-primary.svg` and `assets/logos/ixian-rose-outline.svg`
-* Purpose: The "rose" icon is used, unmodified except for recoloring, as the theme's logo mark.
+= Font Awesome Free (via Blade Icons) =
+* License: CC BY 4.0 (icon artwork)
+* License URI: https://creativecommons.org/licenses/by/4.0/
+* Source: https://blade-ui-kit.com/blade-icons/fas-robot
+* Upstream: https://fontawesome.com/license/free
+* Used in: `assets/logos/ixian-robot.svg`
+* Purpose: The Font Awesome Free 6.7.2 "robot" icon is used, unmodified except for
+  recoloring, as the theme's logo mark. The required attribution notice is retained
+  as a comment inside the SVG file.
 
-The MIT License is GPL-compatible.
+Distributed through the Blade Icons package, which is itself MIT-licensed
+(https://github.com/driesvints/blade-icons/blob/main/LICENSE.md). The MIT License
+covers the package; the icon artwork remains under CC BY 4.0.
+
+Both the CC BY 4.0 and MIT licenses are GPL-compatible.
 
 = Bricolage Grotesque =
 * License: SIL Open Font License, Version 1.1
