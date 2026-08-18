@@ -53,6 +53,8 @@ stay dormant when it is not active.
   capability cards, pricing tiers, client quotes, FAQ accordion and closing call to action.
 * Registers the `ixian` block pattern category so theme patterns are filed under a labelled heading
   in the inserter.
+* Footer tagline reworded from "WordPress & WooCommerce" to suit a theme where WooCommerce is
+  optional.
 
 == Third-Party Libraries ==
 

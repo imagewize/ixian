@@ -52,6 +52,8 @@ and page composition diverge from here.
   `readme.txt`); Aviendha's rose mark removed.
 - Renamed throughout: text domain, function prefixes, CSS class hooks, asset slugs and
   stylesheet handles all move from `aviendha`/`Aviendha` to `ixian`/`Ixian`.
+- Footer tagline no longer reads "WordPress & WooCommerce" — WooCommerce is an optional
+  dependency here, not the theme's subject.
 
 ### Known issues
 - On the dark stat rail, the "good" figure inherits Aludra's
