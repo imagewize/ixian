@@ -11,8 +11,9 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 == Description ==
 
 Ixian is a lean full-site-editing theme for service businesses and SaaS companies. A design
-system in `theme.json` plus style variations provide the foundation, and page content is composed
-from blocks rather than from a large bundled pattern library.
+system in `theme.json` plus style variations provide the foundation, and pages are composed from
+blocks rather than from a large bundled pattern library — the theme ships a small set of full-page
+patterns as starting points, not a catalogue of fragments.
 
 Ixian is forked from Imagewize's [Aviendha](https://github.com/imagewize/aviendha) theme and
 inherits its design system, block templates and template parts, re-aimed from e-commerce at
@@ -29,7 +30,7 @@ stay dormant when it is not active.
 * Solid Full Site Editing (FSE) design system via `theme.json`
 * WooCommerce block templates for single product and product archive
 * Style variations (see `styles/`)
-* No theme-level patterns — block-first composition
+* Full-page starter patterns composed from the Aludra block library
 * Pairs with the Aludra block library (mega menu, carousel, FAQ tabs, and more)
 * Translation-ready
 
@@ -48,6 +49,10 @@ stay dormant when it is not active.
 * Renamed throughout: text domain, function prefixes, CSS class hooks, asset slugs and stylesheet handles.
 * New logo mark (Font Awesome Free "robot", see Third-Party Libraries below); Aviendha's rose mark removed.
 * WooCommerce templates retained, guarded so they stay dormant when WooCommerce is not active.
+* Homepage starter pattern composed from the Aludra block library — split hero, trust bar, stat rail,
+  capability cards, pricing tiers, client quotes, FAQ accordion and closing call to action.
+* Registers the `ixian` block pattern category so theme patterns are filed under a labelled heading
+  in the inserter.
 
 == Third-Party Libraries ==
 

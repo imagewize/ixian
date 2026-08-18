@@ -9,7 +9,7 @@ A lean full-site-editing theme for service businesses and SaaS companies.
 
 ## Description
 
-Ixian is a full-site-editing (FSE) WordPress theme aimed at service businesses and SaaS companies. `theme.json` and style variations provide the design system; page content is composed from blocks rather than from a large bundled pattern library.
+Ixian is a full-site-editing (FSE) WordPress theme aimed at service businesses and SaaS companies. `theme.json` and style variations provide the design system; pages are composed from blocks rather than from a large bundled pattern library, with a small set of full-page starter patterns included.
 
 **Ixian is forked from [Aviendha](https://github.com/imagewize/aviendha).** It takes Aviendha 1.15.0 as its starting point — the `theme.json` design system, block templates, template parts and the `twilight` style variation all come from there — and re-aims it from e-commerce at service and SaaS sites. Aviendha is treated the way Sage is: a versioned base you clone and own. Fixes made to Aviendha do not flow here automatically.
 

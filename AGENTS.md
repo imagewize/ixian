@@ -1,9 +1,10 @@
 # Repository Guidelines
 
-Ixian is a lean FSE/block WordPress theme for WooCommerce stores (WP 6.6+, PHP 8.0+, no build
-tools — direct HTML block markup and PHP). `theme.json` is the single source of truth for colors,
-typography, spacing, and layout. Unlike Imagewize's Elayne theme, Ixian ships **no patterns** —
-content is composed directly from blocks (core blocks or the Aludra block library).
+Ixian is a lean FSE/block WordPress theme for service businesses and SaaS companies (WP 6.6+,
+PHP 8.0+, no build tools — direct HTML block markup and PHP). `theme.json` is the single source of
+truth for colors, typography, spacing, and layout. Unlike Imagewize's Elayne theme, Ixian ships no
+library of pattern *fragments* — it ships **full-page starter patterns** in `patterns/`, composed
+from the Aludra block library.
 
 ## Project Structure & Module Organization
 

@@ -17,6 +17,19 @@ and page composition diverge from here.
 ### Added
 - Full-site-editing design system in `theme.json` — 15-colour palette, 3 gradients,
   9 font sizes, 6 spacing steps, 4 border radii.
+- Block templates for pages, posts, archives, search and 404, plus header, dark header
+  and footer template parts.
+- `twilight` dark style variation.
+- WooCommerce block templates, guarded so they are hidden and unloaded when
+  WooCommerce is not active.
+- **Homepage pattern** (`patterns/page-homepage.php`) — a full page composed from the
+  Aludra block library: split hero, trust bar, stat rail, capability cards, pricing
+  tiers, client quotes, FAQ accordion and a closing call to action. Ixian-flavoured
+  copy and layout live here rather than in shared Aludra, for the same reason the
+  palette lives here rather than in shared Aviendha.
+- **`ixian` block pattern category**, registered on `init`. Patterns declaring
+  `Categories: ixian` would otherwise be filed under an unlabelled heading in the
+  inserter.
 
 ### Changed
 - **New palette.** Aviendha's warm rose-on-cream scheme is replaced by a cool
@@ -35,8 +48,15 @@ and page composition diverge from here.
   slug the Aviendha version omitted.
 - The six literal hex fallbacks in the header's scroll-edge keyframes retargeted to the
   new `contrast` and `border-light`.
-- Block templates for pages, posts, archives, search and 404, plus header, dark header
-  and footer template parts.
-- `twilight` dark style variation.
-- WooCommerce block templates, guarded so they are hidden and unloaded when
-  WooCommerce is not active.
+- New logo mark — the Font Awesome Free "robot" glyph (see Third-Party Libraries in
+  `readme.txt`); Aviendha's rose mark removed.
+- Renamed throughout: text domain, function prefixes, CSS class hooks, asset slugs and
+  stylesheet handles all move from `aviendha`/`Aviendha` to `ixian`/`Ixian`.
+
+### Known issues
+- On the dark stat rail, the "good" figure inherits Aludra's
+  `var(--wp--preset--color--accent)`, which resolves to Ixian's `#0E7490` at 3.06:1
+  against the `main` band — below the 4.5:1 WCAG AA needs at that size and weight.
+  Aviendha 1.15.0 has the same defect (3.31:1). The fix belongs in Aludra as a
+  themeable custom property rather than as a theme-side override of Aludra's
+  selectors.

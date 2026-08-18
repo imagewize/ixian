@@ -4,12 +4,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Ixian is a lean full-site-editing (FSE) WordPress theme for WooCommerce stores — a general-purpose
-e-commerce base for small and medium businesses. It is a companion to Imagewize's **Elayne** and
-**Nynaeve** themes, but deliberately simpler: **no theme-level patterns**. `theme.json`, WooCommerce
-block templates, and style variations form the design system; page content is composed directly from
-blocks (core blocks or the [Aludra](https://github.com/imagewize/aludra) block library) rather than
-inserted as pre-built patterns.
+Ixian is a lean full-site-editing (FSE) WordPress theme for **service businesses and SaaS
+companies**. It is forked from Imagewize's **Aviendha** and is a companion to **Elayne** and
+**Nynaeve**, but deliberately simpler: `theme.json`, block templates and style variations form the
+design system, and pages are composed from the [Aludra](https://github.com/imagewize/aludra) block
+library rather than from a large catalogue of theme-maintained pattern fragments. Ixian ships a
+small set of **full-page starter patterns** in `patterns/`.
+
+WooCommerce block templates ship with the theme but stay dormant unless WooCommerce is active —
+they are inherited from Aviendha, not the point of this theme.
 
 **Requirements:**
 - WordPress 6.6+
@@ -17,18 +20,24 @@ inserted as pre-built patterns.
 - WooCommerce (for store templates)
 - Aludra plugin — recommended, not required
 
-## Why no patterns
+## Patterns
 
-Elayne and Nynaeve both ship large pattern libraries. Ixian intentionally does not, because:
+Elayne and Nynaeve ship large pattern libraries of fragments. Ixian deliberately does not. It ships
+only **full-page starter patterns** (`patterns/page-*.php`), and they stay thin:
 
-1. Blocks (not patterns) are where the reusable logic should live — see Aludra's `aludra/*` blocks
-   (mega menu, carousel, FAQ tabs, etc.). Patterns become one-liners around those blocks rather than
-   theme-maintained markup walls.
-2. It keeps this theme's surface area small: no pattern-validation harness, no per-vertical pattern
-   sets to maintain.
+1. Blocks — not patterns — are where reusable logic lives. See Aludra's `aludra/*` blocks (mega
+   menu, carousel, FAQ tabs, pricing tiers, etc.). A pattern should be a composition of those
+   blocks, not a wall of theme-maintained markup.
+2. Ixian-flavoured copy and layout belong in `ixian/patterns/`. Genuinely theme-neutral skeletons
+   get promoted to Aludra — but only once a *second* theme wants them.
+3. Build new section types as patterns from existing blocks first. Promote to a real Aludra block
+   only when a pattern genuinely cannot express it.
 
-If Ixian ever needs vertical-specific starting content (e.g. a "cycling" flavor), prefer a
-**style variation** (`styles/*.json`) over a pattern library — same design system, different palette.
+Copy the markup shapes from Aludra's own `patterns/page-*.php` when writing a new one — those are
+known-valid against each block's `save` output, which is what block validation compares against.
+
+For a palette variant, still prefer a **style variation** (`styles/*.json`) over a new pattern set —
+same design system, different colours.
 
 ## Architecture
 
@@ -71,13 +80,12 @@ The Aludra mega-menu block requires its host theme to register a `menu` template
 `functions.php` does this via the `default_wp_template_part_areas` filter. This makes mega menu
 template parts (created by users in the Site Editor) appear under
 **Appearance → Editor → Patterns → Template Parts → Menus**. Content for those template parts lives
-in the database, not in this theme — Ixian ships no menu template part files, matching the
-"no patterns" rule above.
+in the database, not in this theme — Ixian ships no menu template part files.
 
 ### Style variations (`styles/`)
 
 Alternate color palettes layered on the same `theme.json` design system. `styles/twilight.json` is
-the example — a dark, rose-accented variant. Follow this pattern for future variations: override
+the example — a dark, cool-toned variant. Follow this pattern for future variations: override
 `settings.color.palette` (keep the same slugs) and any `styles` overrides needed, nothing else.
 
 ## Development
