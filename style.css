@@ -174,7 +174,7 @@ Ixian is distributed under the terms of the GNU GPL.
  * the block markup, and a `border-light` shadow under it would read as a seam.
  *
  * The colours are literal because a keyframe needs the transparent stop to be
- * the same colour at zero alpha: `#e5ded2` is `border-light`, `#211c1a` is
+ * the same colour at zero alpha: `#d9e1ee` is `border-light`, `#0f1620` is
  * `contrast`. Same hex-with-alpha idiom the dark header's border uses.
  */
 @supports (animation-timeline: scroll()) {
@@ -188,14 +188,14 @@ Ixian is distributed under the terms of the GNU GPL.
 @keyframes ixian-header-edge {
 	from {
 		box-shadow:
-			0 1px 0 0 #e5ded200,
-			0 8px 24px -18px #211c1a00;
+			0 1px 0 0 #d9e1ee00,
+			0 8px 24px -18px #0f162000;
 	}
 
 	to {
 		box-shadow:
-			0 1px 0 0 #e5ded2,
-			0 8px 24px -18px #211c1a80;
+			0 1px 0 0 #d9e1ee,
+			0 8px 24px -18px #0f162080;
 	}
 }
 
