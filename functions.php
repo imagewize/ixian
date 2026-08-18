@@ -18,7 +18,8 @@ function ixian_setup() {
 	// Enqueue editor styles.
 	add_editor_style( 'style.css' );
 
-	// Remove core block patterns; content is composed from aludra/* blocks directly.
+	// Remove core block patterns; pages are composed from Ixian's own patterns
+	// and the aludra/* block library.
 	remove_theme_support( 'core-block-patterns' );
 
 	// WooCommerce.
@@ -28,6 +29,23 @@ function ixian_setup() {
 	add_theme_support( 'wc-product-gallery-slider' );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\ixian_setup' );
+
+/**
+ * Register the 'ixian' block pattern category.
+ *
+ * Theme patterns in `patterns/` declare `Categories: ixian`; without this the
+ * inserter files them under an unlabelled category.
+ */
+function ixian_register_pattern_categories() {
+	register_block_pattern_category(
+		'ixian',
+		array(
+			'label'       => __( 'Ixian', 'ixian' ),
+			'description' => __( 'Full page layouts composed from the Aludra block library.', 'ixian' ),
+		)
+	);
+}
+add_action( 'init', __NAMESPACE__ . '\ixian_register_pattern_categories' );
 
 /**
  * Register the 'menu' template part area, required by the Aludra mega-menu block.
@@ -225,8 +243,8 @@ function ixian_add_to_cart_template_part_area( $areas ) {
 /**
  * Unregister WooCommerce's bundled block patterns.
  *
- * Ixian ships no patterns and removes core's; WooCommerce registers a set of
- * its own on top, which this theme neither designed nor styles. The
+ * Ixian removes core's patterns and ships only its own; WooCommerce registers
+ * a set on top, which this theme neither designed nor styles. The
  * `woocommerce/*` patterns are left alone — the coming soon templates render
  * them.
  */
@@ -244,7 +262,7 @@ function ixian_unregister_woocommerce_patterns() {
  * Disable WooCommerce's full-composability pattern toolkit.
  *
  * Its onboarding flow offers to assemble pages from patterns and overwrite the
- * theme's templates, neither of which applies to a theme without patterns.
+ * theme's templates, neither of which applies to Ixian's own page patterns.
  *
  * @param array $features Enabled WooCommerce admin features.
  * @return array Features without the pattern toolkit.

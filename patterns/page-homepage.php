@@ -1,0 +1,418 @@
+<?php
+/**
+ * Title: Homepage
+ * Slug: ixian/page-homepage
+ * Categories: ixian
+ * Block Types: core/post-content
+ * Description: A full homepage for a service business or SaaS product — split hero, trust bar, headline metrics, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
+ *
+ * @package Ixian
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+?>
+<!-- wp:aludra/hero-split {"className":"is-style-night"} -->
+<div class="wp-block-aludra-hero-split alignfull is-style-night" style="margin-top:0;margin-bottom:0"><div class="hero-split__inner"><!-- wp:group {"className":"hero-split__content","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group hero-split__content"><!-- wp:paragraph {"className":"hero-split__eyebrow"} -->
+<p class="hero-split__eyebrow">Platform &amp; Infrastructure</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1,"className":"hero-split__title","style":{"typography":{"lineHeight":"1.15"}}} -->
+<h1 class="wp-block-heading hero-split__title" style="line-height:1.15">Ship Faster. <em>Break Less.</em></h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"hero-split__lead"} -->
+<p class="hero-split__lead">Everything your team needs to build, deploy and monitor in one place — without stitching together six tools that were never meant to talk to each other.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"className":"hero-split__ctas","layout":{"type":"flex","flexWrap":"wrap"}} -->
+<div class="wp-block-buttons hero-split__ctas"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Start Free Trial</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Book a Demo</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph {"className":"hero-split__trust"} -->
+<p class="hero-split__trust"><span class="hero-split__check">✓</span> No credit card required&nbsp;&nbsp;·&nbsp;&nbsp;<span class="hero-split__check">✓</span> Cancel any time</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"hero-split__media"} -->
+<div class="wp-block-group hero-split__media"><!-- wp:aludra/load-waterfall -->
+<figure class="wp-block-aludra-load-waterfall" aria-label="Deployment timeline: build to live in 0.9 seconds"><figcaption class="wf-head"><span class="wf-url">deploy · production</span><span class="wf-badge">live in 0.9s</span></figcaption><div class="wf-rows"><div class="wf-row"><span>resolve</span><div class="wf-track"><i class="wf-bar is-doc" style="left:0%;width:22%;animation-delay:0.1s"></i></div></div><div class="wf-row"><span>build</span><div class="wf-track"><i class="wf-bar is-css" style="left:22%;width:14%;animation-delay:0.25s"></i></div></div><div class="wf-row"><span>test suite</span><div class="wf-track"><i class="wf-bar is-img" style="left:26%;width:26%;animation-delay:0.4s"></i></div></div><div class="wf-row"><span>artifacts</span><div class="wf-track"><i class="wf-bar" style="left:30%;width:18%;animation-delay:0.55s"></i></div></div><div class="wf-row"><span>release</span><div class="wf-track"><i class="wf-bar" style="left:52%;width:20%;animation-delay:0.7s"></i><b class="wf-lcp" style="left:52%"><span>live 0.9s</span></b></div></div><div class="wf-row"><span>healthcheck</span><div class="wf-track"><i class="wf-bar" style="left:72%;width:12%;animation-delay:0.85s"></i></div></div></div><div class="wf-axis"><span></span><span class="wf-ticks"><span>0s</span><span>0.5s</span><span>1.0s</span><span>1.5s</span></span></div></figure>
+<!-- /wp:aludra/load-waterfall --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:aludra/hero-split -->
+
+<!-- wp:aludra/trust-bar -->
+<div class="wp-block-aludra-trust-bar alignfull"><div class="trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
+<div class="wp-block-group trust-bar__items"><!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-shield.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>SOC 2 Type II</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-clock.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>99.99% uptime</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-users.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Trusted by 4,000 teams</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"trust-item","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group trust-item"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-chat.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Support in under an hour</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:aludra/trust-bar -->
+
+<!-- wp:aludra/stat-rail -->
+<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"0.9s","caption":"Median deploy, commit to live","good":true} -->
+<div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num">0.9s</div><div class="stat-rail__cap">Median deploy, commit to live</div></div>
+<!-- /wp:aludra/stat-item -->
+
+<!-- wp:aludra/stat-item {"number":"-64%","caption":"Fewer failed releases"} -->
+<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">-64%</div><div class="stat-rail__cap">Fewer failed releases</div></div>
+<!-- /wp:aludra/stat-item -->
+
+<!-- wp:aludra/stat-item {"number":"4,000+","caption":"Teams shipping every day"} -->
+<div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">4,000+</div><div class="stat-rail__cap">Teams shipping every day</div></div>
+<!-- /wp:aludra/stat-item --></div></div>
+<!-- /wp:aludra/stat-rail -->
+
+<!-- wp:aludra/spine-section -->
+<div class="wp-block-aludra-spine-section alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Platform</p><h2 class="spine-section__heading">One Platform, Six Fewer Tools.</h2><p class="spine-section__aside">Everything below ships on every plan — no add-ons, no per-seat surprises.</p></div><div class="spine-section__content"><!-- wp:aludra/feature-cards -->
+<div class="wp-block-aludra-feature-cards alignfull"><div class="feature-cards__inner"><!-- wp:group {"className":"feature-cards__grid","layout":{"type":"default"}} -->
+<div class="wp-block-group feature-cards__grid"><!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-code.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Instant environments"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Instant Environments</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Every branch gets a real, isolated environment in seconds — reviewers see the change running, not a screenshot of it.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-performance.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Edge delivery"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Edge Delivery</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Assets and responses served from the node nearest your visitor, with cache rules you can reason about.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-shield.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Secrets and access"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Secrets &amp; Access</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Scoped credentials, short-lived tokens and an audit trail that answers "who changed this?" without a war room.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-bar-chart.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Observability"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Observability</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Logs, traces and metrics from the same timeline, so a slow request is one click from the line that caused it.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-plugin.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Integrations"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Integrations</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A documented API, webhooks that retry properly, and first-party connectors for the tools your team already runs.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-accessible.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Built-in accessibility checks"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Accessibility Checks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Contrast, focus order and landmark checks run on every preview, so problems get caught before a release does.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:aludra/feature-cards --></div></div></div>
+<!-- /wp:aludra/spine-section -->
+
+<!-- wp:aludra/spine-section {"tint":true} -->
+<div class="wp-block-aludra-spine-section is-tinted alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Pricing</p><h2 class="spine-section__heading">Priced Per Project, Not Per Seat.</h2><p class="spine-section__aside">Every plan includes the full platform. Move up when you need more capacity, not more features.</p></div><div class="spine-section__content"><!-- wp:aludra/pricing-tiers {"className":"is-style-spec-sheet"} -->
+<div class="wp-block-aludra-pricing-tiers is-style-spec-sheet alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Starter</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"pricing-who"} -->
+<p class="pricing-who">For solo builders and side projects</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"pricing-price"} -->
+<p class="pricing-price">€19<span class="pricing-price__unit">/ month</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"pricing-features"} -->
+<ul class="wp-block-list pricing-features"><!-- wp:list-item -->
+<li>3 projects</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Preview environments</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>7-day log retention</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Community support</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:buttons {"className":"pricing-cta"} -->
+<div class="wp-block-buttons pricing-cta"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#">Start Free</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"className":"pricing-featured-column"} -->
+<div class="wp-block-column pricing-featured-column"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Team <span class="pricing-tag">Most popular</span></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"pricing-who"} -->
+<p class="pricing-who">For teams shipping every week</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"pricing-price"} -->
+<p class="pricing-price">€79<span class="pricing-price__unit">/ month</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"pricing-features"} -->
+<ul class="wp-block-list pricing-features"><!-- wp:list-item -->
+<li>Unlimited projects</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Full observability suite</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>90-day log retention</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>1-hour support response</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:buttons {"className":"pricing-cta"} -->
+<div class="wp-block-buttons pricing-cta"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#">Start Free Trial</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Scale</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"pricing-who"} -->
+<p class="pricing-who">For organisations with compliance needs</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"pricing-price"} -->
+<p class="pricing-price">Custom<span class="pricing-price__unit">/ annual</span></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"className":"pricing-features"} -->
+<ul class="wp-block-list pricing-features"><!-- wp:list-item -->
+<li>Everything in Team</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>SSO and SCIM</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Dedicated capacity</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Named support engineer</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:buttons {"className":"pricing-cta"} -->
+<div class="wp-block-buttons pricing-cta"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#">Talk to Sales</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
+<!-- /wp:aludra/pricing-tiers --></div></div></div>
+<!-- /wp:aludra/spine-section -->
+
+<!-- wp:aludra/spine-section -->
+<div class="wp-block-aludra-spine-section alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Customers</p><h2 class="spine-section__heading">In Their Words.</h2><p class="spine-section__aside">Three teams who moved off a stack of stitched-together tools.</p></div><div class="spine-section__content"><!-- wp:aludra/review-profiles {"className":"is-style-quotes"} -->
+<div class="wp-block-aludra-review-profiles alignfull is-style-quotes" style="margin-top:0;margin-bottom:0"><div class="review-profiles__content"><!-- wp:group {"className":"review-profiles__grid"} -->
+<div class="wp-block-group review-profiles__grid"><!-- wp:group {"className":"review-profiles__item","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group review-profiles__item"><!-- wp:paragraph {"className":"review-profiles__quote"} -->
+<p class="review-profiles__quote">We cut our release process from a half-day ritual to something a junior engineer does on their second week. Nothing about that was luck.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"review-profiles__attribution"} -->
+<p class="review-profiles__attribution"><strong>Engineering lead</strong>Logistics platform, Rotterdam</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"review-profiles__item","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group review-profiles__item"><!-- wp:paragraph {"className":"review-profiles__quote"} -->
+<p class="review-profiles__quote">The audit trail alone paid for the migration. Our security review went from three weeks of screenshots to an afternoon.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"review-profiles__attribution"} -->
+<p class="review-profiles__attribution"><strong>CTO</strong>Fintech startup, Berlin</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"review-profiles__item","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group review-profiles__item"><!-- wp:paragraph {"className":"review-profiles__quote"} -->
+<p class="review-profiles__quote">Preview environments changed how our designers work. They stopped filing tickets about screenshots and started reviewing the real thing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"review-profiles__attribution"} -->
+<p class="review-profiles__attribution"><strong>Head of product</strong>SaaS company, Amsterdam</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:aludra/review-profiles --></div></div></div>
+<!-- /wp:aludra/spine-section -->
+
+<!-- wp:aludra/spine-section {"tint":true} -->
+<div class="wp-block-aludra-spine-section is-tinted alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Questions</p><h2 class="spine-section__heading">Before You Sign Up.</h2><p class="spine-section__aside"></p></div><div class="spine-section__content"><!-- wp:aludra/faq-tabs {"displayMode":"native"} -->
+<div class="wp-block-aludra-faq-tabs alignwide faq-tabs-wrapper is-display-mode-native" data-display-mode="native"><div class="faq-native"><!-- wp:aludra/faq-tab-answer {"question":"How long does migration take?","title":"Migration","displayMode":"native","openByDefault":true} -->
+<details class="wp-block-aludra-faq-tab-answer faq-tab-answer" data-question="How long does migration take?" open><summary>How long does migration take?</summary><div class="faq-answer-content"><!-- wp:paragraph -->
+<p>Most teams have their first project running the same afternoon. A full migration — every service, every environment — typically lands inside two weeks, and we do not charge for the overlap period while you run both.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Larger organisations with compliance requirements usually plan for a quarter. We will map that out with you before you commit to anything.</p>
+<!-- /wp:paragraph --></div></details>
+<!-- /wp:aludra/faq-tab-answer -->
+
+<!-- wp:aludra/faq-tab-answer {"question":"What happens when we outgrow a plan?","title":"Plans and limits","displayMode":"native"} -->
+<details class="wp-block-aludra-faq-tab-answer faq-tab-answer" data-question="What happens when we outgrow a plan?"><summary>What happens when we outgrow a plan?</summary><div class="faq-answer-content"><!-- wp:paragraph -->
+<p>Nothing breaks. You will see a notice in the dashboard well before you hit a limit, and we will never throttle a production deploy because of billing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Upgrades take effect immediately and are prorated. Downgrades take effect at the end of the billing period.</p>
+<!-- /wp:paragraph --></div></details>
+<!-- /wp:aludra/faq-tab-answer -->
+
+<!-- wp:aludra/faq-tab-answer {"question":"Can we self-host?","title":"Self-hosting","displayMode":"native"} -->
+<details class="wp-block-aludra-faq-tab-answer faq-tab-answer" data-question="Can we self-host?"><summary>Can we self-host?</summary><div class="faq-answer-content"><!-- wp:paragraph -->
+<p>Yes, on the Scale plan. You get the same control plane running inside your own cloud account, with updates you apply on your own schedule.</p>
+<!-- /wp:paragraph --></div></details>
+<!-- /wp:aludra/faq-tab-answer -->
+
+<!-- wp:aludra/faq-tab-answer {"question":"What does support actually cover?","title":"Support","displayMode":"native"} -->
+<details class="wp-block-aludra-faq-tab-answer faq-tab-answer" data-question="What does support actually cover?"><summary>What does support actually cover?</summary><div class="faq-answer-content"><!-- wp:paragraph -->
+<p>Real engineers, not a ticket queue that reformats your question back at you. Team plans get a one-hour first response during business hours; Scale plans get a named engineer and an on-call escalation path.</p>
+<!-- /wp:paragraph --></div></details>
+<!-- /wp:aludra/faq-tab-answer --></div></div>
+<!-- /wp:aludra/faq-tabs --></div></div></div>
+<!-- /wp:aludra/spine-section -->
+
+<!-- wp:aludra/cta-banner -->
+<div class="wp-block-aludra-cta-banner alignfull" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
+<h2 class="wp-block-heading cta-banner__title" style="line-height:1.2">Start shipping this afternoon.</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"cta-banner__lead"} -->
+<p class="cta-banner__lead">Free for 14 days, no credit card, and an engineer on hand if you get stuck.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"className":"cta-banner__ctas","layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons cta-banner__ctas"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Start Free Trial</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:aludra/cta-banner -->
