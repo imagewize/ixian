@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/trust-bar -->
 
 <!-- wp:aludra/spine-section -->
-<div class="wp-block-aludra-spine-section alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Plans</p><h2 class="spine-section__heading">Three Plans, One Platform.</h2><p class="spine-section__aside">Start free, upgrade when you need more capacity. Nothing is held back behind a higher tier.</p></div><div class="spine-section__content"><!-- wp:aludra/pricing-tiers {"className":"is-style-spec-sheet"} -->
+<div class="wp-block-aludra-spine-section alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Plans</p><h2 class="spine-section__heading">Three Plans, One Platform.</h2><p class="spine-section__aside">Start free, upgrade when you need more capacity. Nothing is held back behind a higher tier.</p></div><div class="spine-section__content"><!-- wp:aludra/pricing-tiers {"backgroundColor":"","className":"is-style-spec-sheet"} -->
 <div class="wp-block-aludra-pricing-tiers is-style-spec-sheet alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:heading {"level":3} -->
