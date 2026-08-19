@@ -30,6 +30,17 @@ and page composition diverge from here.
 - **`ixian` block pattern category**, registered on `init`. Patterns declaring
   `Categories: ixian` would otherwise be filed under an unlabelled heading in the
   inserter.
+- **Pricing pattern** (`patterns/page-pricing.php`) — intro hero, trust bar, the
+  three-tier spec-sheet pricing table, a billing-focused FAQ accordion and a closing
+  call to action.
+- **About pattern** (`patterns/page-about.php`) — hero with dual CTAs, trust bar,
+  company story, headline metrics, team capability cards, client quotes and a closing
+  call to action.
+- **Contact pattern** (`patterns/page-contact.php`) — dark contact section with an
+  intro, contact details, an availability badge, and a Contact Form 7 form card.
+- **Portfolio pattern** (`patterns/page-portfolio.php`) — intro hero, trust bar, a
+  client-site rail carousel, reasons teams switch as capability cards, and a closing
+  call to action.
 
 ### Changed
 - **New palette.** Aviendha's warm rose-on-cream scheme is replaced by a cool
