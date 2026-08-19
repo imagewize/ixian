@@ -4,7 +4,7 @@
  * Slug: ixian/page-homepage
  * Categories: ixian
  * Block Types: core/post-content
- * Description: A full homepage for a service business or SaaS product — split hero, trust bar, headline metrics, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
+ * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
  *
  * @package Ixian
  */
@@ -13,41 +13,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- wp:aludra/hero-split {"className":"is-style-night"} -->
-<div class="wp-block-aludra-hero-split alignfull is-style-night" style="margin-top:0;margin-bottom:0"><div class="hero-split__inner"><!-- wp:group {"className":"hero-split__content","layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group hero-split__content"><!-- wp:paragraph {"className":"hero-split__eyebrow"} -->
-<p class="hero-split__eyebrow">Platform &amp; Infrastructure</p>
-<!-- /wp:paragraph -->
+<!-- wp:aludra/hero-banner {"className":"is-style-canvas"} -->
+<div class="wp-block-aludra-hero-banner alignfull is-style-canvas" style="margin-top:0;margin-bottom:0"><div class="hero-banner__content"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical","alignItems":"center","justifyContent":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|small"}}} -->
+<div class="wp-block-group"><!-- wp:group {"className":"hero-banner__eyebrow","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
+<div class="wp-block-group hero-banner__eyebrow"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-code.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt=""/></figure>
+<!-- /wp:image -->
 
-<!-- wp:heading {"level":1,"className":"hero-split__title","style":{"typography":{"lineHeight":"1.15"}}} -->
-<h1 class="wp-block-heading hero-split__title" style="line-height:1.15">Ship Faster. <em>Break Less.</em></h1>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"className":"hero-split__lead"} -->
-<p class="hero-split__lead">Everything your team needs to build, deploy and monitor in one place — without stitching together six tools that were never meant to talk to each other.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:buttons {"className":"hero-split__ctas","layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-buttons hero-split__ctas"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Start Free Trial</a></div>
-<!-- /wp:button -->
-
-<!-- wp:button {"className":"is-style-outline"} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#">Book a Demo</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons -->
-
-<!-- wp:paragraph {"className":"hero-split__trust"} -->
-<p class="hero-split__trust"><span class="hero-split__check">✓</span> No credit card required&nbsp;&nbsp;·&nbsp;&nbsp;<span class="hero-split__check">✓</span> Cancel any time</p>
+<!-- wp:paragraph -->
+<p>Platform &amp; Infrastructure</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"className":"hero-split__media"} -->
-<div class="wp-block-group hero-split__media"><!-- wp:aludra/load-waterfall {"siteUrl":"deploy · production","badge":"live in 0.9s","rowLabels":["resolve","build","test suite","artifacts","release","healthcheck"],"lcpLabel":"live 0.9s"} -->
-<figure class="wp-block-aludra-load-waterfall" aria-label="Load waterfall for deploy · production: live 0.9s"><figcaption class="wf-head"><span class="wf-url">deploy · production</span><span class="wf-badge">live in 0.9s</span></figcaption><div class="wf-rows"><div class="wf-row"><span>resolve</span><div class="wf-track"><i class="wf-bar is-doc" style="left:0%;width:22%;animation-delay:0.1s"></i></div></div><div class="wf-row"><span>build</span><div class="wf-track"><i class="wf-bar is-css" style="left:22%;width:14%;animation-delay:0.25s"></i></div></div><div class="wf-row"><span>test suite</span><div class="wf-track"><i class="wf-bar is-img" style="left:26%;width:26%;animation-delay:0.4s"></i></div></div><div class="wf-row"><span>artifacts</span><div class="wf-track"><i class="wf-bar" style="left:30%;width:18%;animation-delay:0.55s"></i></div></div><div class="wf-row"><span>release</span><div class="wf-track"><i class="wf-bar" style="left:52%;width:20%;animation-delay:0.7s"></i><b class="wf-lcp" style="left:52%"><span>live 0.9s</span></b></div></div><div class="wf-row"><span>healthcheck</span><div class="wf-track"><i class="wf-bar" style="left:72%;width:12%;animation-delay:0.85s"></i></div></div></div><div class="wf-axis"><span></span><span class="wf-ticks"><span>0s</span><span>0.5s</span><span>1.0s</span><span>1.5s</span></span></div></figure>
-<!-- /wp:aludra/load-waterfall --></div>
+<!-- wp:heading {"level":1,"textAlign":"center","className":"hero-banner__title","style":{"typography":{"lineHeight":"1.15"}}} -->
+<h1 class="wp-block-heading has-text-align-center hero-banner__title" style="line-height:1.15">Ship Faster. <em>Break Less.</em></h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","className":"hero-banner__lead"} -->
+<p class="has-text-align-center hero-banner__lead">Everything your team needs to build, deploy and monitor in one place — without stitching together six tools that were never meant to talk to each other.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|medium","right":"var:preset|spacing|2-x-small"}}},"borderColor":"border-light","backgroundColor":"white","layout":{"type":"flex","alignItems":"center","justifyContent":"space-between","flexWrap":"nowrap"}} -->
+<div class="wp-block-group has-border-color has-border-light-border-color has-white-background-color has-background" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--2-x-small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
+<p class="has-secondary-color has-text-color has-small-font-size">What are you building? Landing page, online store, portfolio…</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#">Browse Templates</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"align":"center","textColor":"secondary","fontSize":"small","style":{"spacing":{"margin":{"top":"var:preset|spacing|small","bottom":"0"}}}} -->
+<p class="has-text-align-center has-secondary-color has-text-color has-small-font-size" style="margin-top:var(--wp--preset--spacing--small);margin-bottom:0">Need a starting point? Try one of these:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap"}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"border-light","backgroundColor":"white","textColor":"contrast","fontSize":"small"} -->
+<p class="has-border-color has-border-light-border-color has-contrast-color has-white-background-color has-text-color has-background has-small-font-size" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--small)">Landing Page</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"border-light","backgroundColor":"white","textColor":"contrast","fontSize":"small"} -->
+<p class="has-border-color has-border-light-border-color has-contrast-color has-white-background-color has-text-color has-background has-small-font-size" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--small)">Online Store</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"border-light","backgroundColor":"white","textColor":"contrast","fontSize":"small"} -->
+<p class="has-border-color has-border-light-border-color has-contrast-color has-white-background-color has-text-color has-background has-small-font-size" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--small)">SaaS Dashboard</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"border-light","backgroundColor":"white","textColor":"contrast","fontSize":"small"} -->
+<p class="has-border-color has-border-light-border-color has-contrast-color has-white-background-color has-text-color has-background has-small-font-size" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--small)">Portfolio</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|small","right":"var:preset|spacing|small"}}},"borderColor":"border-light","backgroundColor":"white","textColor":"contrast","fontSize":"small"} -->
+<p class="has-border-color has-border-light-border-color has-contrast-color has-white-background-color has-text-color has-background has-small-font-size" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--small)">Docs Site</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group --></div></div>
-<!-- /wp:aludra/hero-split -->
+<!-- /wp:aludra/hero-banner -->
 
 <!-- wp:aludra/trust-bar -->
 <div class="wp-block-aludra-trust-bar alignfull"><div class="trust-bar__inner"><!-- wp:group {"className":"trust-bar__items","style":{"spacing":{"blockGap":"32px"}},"layout":{"type":"flex","flexWrap":"wrap","alignItems":"center","justifyContent":"center"}} -->
