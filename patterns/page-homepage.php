@@ -4,7 +4,7 @@
  * Slug: ixian/page-homepage
  * Categories: ixian
  * Block Types: core/post-content
- * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
+ * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
  *
  * @package Ixian
  */
@@ -130,6 +130,80 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="wp-block-aludra-stat-item stat-rail__item"><div class="stat-rail__num">4,000+</div><div class="stat-rail__cap">Teams shipping every day</div></div>
 <!-- /wp:aludra/stat-item --></div></div>
 <!-- /wp:aludra/stat-rail -->
+
+<!-- wp:aludra/split-section {"mediaWidth":40,"tint":true} -->
+<div class="wp-block-aludra-split-section is-tinted alignfull" style="margin-top:0;margin-bottom:0"><div class="split-section__shell"><div class="split-section__header"><p class="split-section__label">How It Works</p><h2 class="split-section__heading">From Commit to Live in <em>Three Steps</em></h2><p class="split-section__lead">No release window, no runbook, and no meeting to decide whether today is a good day to deploy.</p></div><div class="split-section__panes" style="--aludra-split-media:40%"><!-- wp:group {"className":"split-section__media"} -->
+<div class="wp-block-group split-section__media"><!-- wp:aludra/load-waterfall {"siteUrl":"deploy · production","badge":"live in 0.9s","rowLabels":["resolve","build","test suite","artifacts","release","healthcheck"],"lcpLabel":"live 0.9s"} -->
+<figure class="wp-block-aludra-load-waterfall" aria-label="Load waterfall for deploy · production: live 0.9s"><figcaption class="wf-head"><span class="wf-url">deploy · production</span><span class="wf-badge">live in 0.9s</span></figcaption><div class="wf-rows"><div class="wf-row"><span>resolve</span><div class="wf-track"><i class="wf-bar is-doc" style="left:0%;width:22%;animation-delay:0.1s"></i></div></div><div class="wf-row"><span>build</span><div class="wf-track"><i class="wf-bar is-css" style="left:22%;width:14%;animation-delay:0.25s"></i></div></div><div class="wf-row"><span>test suite</span><div class="wf-track"><i class="wf-bar is-img" style="left:26%;width:26%;animation-delay:0.4s"></i></div></div><div class="wf-row"><span>artifacts</span><div class="wf-track"><i class="wf-bar" style="left:30%;width:18%;animation-delay:0.55s"></i></div></div><div class="wf-row"><span>release</span><div class="wf-track"><i class="wf-bar" style="left:52%;width:20%;animation-delay:0.7s"></i><b class="wf-lcp" style="left:52%"><span>live 0.9s</span></b></div></div><div class="wf-row"><span>healthcheck</span><div class="wf-track"><i class="wf-bar" style="left:72%;width:12%;animation-delay:0.85s"></i></div></div></div><div class="wf-axis"><span></span><span class="wf-ticks"><span>0s</span><span>0.5s</span><span>1.0s</span><span>1.5s</span></span></div></figure>
+<!-- /wp:aludra/load-waterfall --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"split-section__content"} -->
+<div class="wp-block-group split-section__content"><!-- wp:aludra/service-blocks {"className":"is-style-steps"} -->
+<div class="wp-block-aludra-service-blocks alignwide is-style-steps" style="margin-top:0;margin-bottom:0"><div class="service-blocks__inner"><!-- wp:group {"className":"service-blocks__list"} -->
+<div class="wp-block-group service-blocks__list"><!-- wp:group {"className":"service-block"} -->
+<div class="wp-block-group service-block"><!-- wp:group {"className":"service-block__header"} -->
+<div class="wp-block-group service-block__header"><!-- wp:paragraph {"className":"service-block__num"} -->
+<p class="service-block__num">01</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"className":"service-block__title"} -->
+<h3 class="wp-block-heading service-block__title">Connect Your Repository</h3>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-block__body"} -->
+<div class="wp-block-group service-block__body"><!-- wp:paragraph {"className":"service-block__desc"} -->
+<p class="service-block__desc">Point us at a repository and the framework, build command and runtime are detected for you. Nothing to install locally, and no YAML to write before the first deploy.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-block"} -->
+<div class="wp-block-group service-block"><!-- wp:group {"className":"service-block__header"} -->
+<div class="wp-block-group service-block__header"><!-- wp:paragraph {"className":"service-block__num"} -->
+<p class="service-block__num">02</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"className":"service-block__title"} -->
+<h3 class="wp-block-heading service-block__title">Open a Pull Request</h3>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-block__body"} -->
+<div class="wp-block-group service-block__body"><!-- wp:paragraph {"className":"service-block__desc"} -->
+<p class="service-block__desc">Every branch gets a real, isolated environment in seconds. Reviewers open a link and see the change running, rather than a screenshot of it in a comment thread.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-block"} -->
+<div class="wp-block-group service-block"><!-- wp:group {"className":"service-block__header"} -->
+<div class="wp-block-group service-block__header"><!-- wp:paragraph {"className":"service-block__num"} -->
+<p class="service-block__num">03</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"className":"service-block__title"} -->
+<h3 class="wp-block-heading service-block__title">Merge and Ship</h3>
+<!-- /wp:heading --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-block__body"} -->
+<div class="wp-block-group service-block__body"><!-- wp:paragraph {"className":"service-block__desc"} -->
+<p class="service-block__desc">Merging releases to production behind a health check, with logs, traces and metrics on one timeline from the very first request.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:aludra/service-blocks -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#">Start Free Trial</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --></div></div></div>
+<!-- /wp:aludra/split-section -->
 
 <!-- wp:aludra/spine-section -->
 <div class="wp-block-aludra-spine-section alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Platform</p><h2 class="spine-section__heading">One Platform, Six Fewer Tools.</h2><p class="spine-section__aside">Everything below ships on every plan — no add-ons, no per-seat surprises.</p></div><div class="spine-section__content"><!-- wp:aludra/feature-cards -->
