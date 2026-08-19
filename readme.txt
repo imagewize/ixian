@@ -51,6 +51,7 @@ stay dormant when it is not active.
 * WooCommerce templates retained, guarded so they stay dormant when WooCommerce is not active.
 * Homepage starter pattern composed from the Aludra block library — split hero, trust bar, stat rail,
   capability cards, pricing tiers, client quotes, FAQ accordion and closing call to action.
+* Pricing, About, Contact and Portfolio starter patterns, rounding out the full-page pattern set.
 * Registers the `ixian` block pattern category so theme patterns are filed under a labelled heading
   in the inserter.
 * Footer tagline reworded from "WordPress & WooCommerce" to suit a theme where WooCommerce is
