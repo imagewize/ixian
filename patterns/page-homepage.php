@@ -210,7 +210,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/spine-section -->
 
 <!-- wp:aludra/spine-section {"tint":true} -->
-<div class="wp-block-aludra-spine-section is-tinted alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Pricing</p><h2 class="spine-section__heading">Priced Per Project, Not Per Seat.</h2><p class="spine-section__aside">Every plan includes the full platform. Move up when you need more capacity, not more features.</p></div><div class="spine-section__content"><!-- wp:aludra/pricing-tiers {"className":"is-style-spec-sheet"} -->
+<div class="wp-block-aludra-spine-section is-tinted alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Pricing</p><h2 class="spine-section__heading">Priced Per Project, Not Per Seat.</h2><p class="spine-section__aside">Every plan includes the full platform. Move up when you need more capacity, not more features.</p></div><div class="spine-section__content"><!-- wp:aludra/pricing-tiers {"backgroundColor":"","className":"is-style-spec-sheet"} -->
 <div class="wp-block-aludra-pricing-tiers is-style-spec-sheet alignfull" style="margin-top:0;margin-bottom:0"><!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:heading {"level":3} -->
