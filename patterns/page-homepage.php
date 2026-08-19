@@ -117,8 +117,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:group --></div></div>
 <!-- /wp:aludra/trust-bar -->
 
-<!-- wp:aludra/stat-rail -->
-<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"0.9s","caption":"Median deploy, commit to live","good":true} -->
+<!-- wp:aludra/stat-rail {"className":"is-style-light"} -->
+<div class="wp-block-aludra-stat-rail alignfull is-style-light" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"0.9s","caption":"Median deploy, commit to live","good":true} -->
 <div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num">0.9s</div><div class="stat-rail__cap">Median deploy, commit to live</div></div>
 <!-- /wp:aludra/stat-item -->
 
