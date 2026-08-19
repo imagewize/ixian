@@ -131,11 +131,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/stat-item --></div></div>
 <!-- /wp:aludra/stat-rail -->
 
-<!-- wp:aludra/split-section {"mediaWidth":40,"tint":true,"revealOnScroll":true} -->
-<div class="wp-block-aludra-split-section is-tinted alignfull" style="margin-top:0;margin-bottom:0" data-aludra-reveal="true"><div class="split-section__shell"><div class="split-section__header"><p class="split-section__label">How It Works</p><h2 class="split-section__heading">From Commit to Live in <em>Three Steps</em></h2><p class="split-section__lead">No release window, no runbook, and no meeting to decide whether today is a good day to deploy.</p></div><div class="split-section__panes" style="--aludra-split-media:40%"><!-- wp:group {"className":"split-section__media"} -->
+<!-- wp:aludra/split-section {"mediaWidth":46,"tint":true,"revealOnScroll":true} -->
+<div class="wp-block-aludra-split-section is-tinted alignfull" style="margin-top:0;margin-bottom:0" data-aludra-reveal="true"><div class="split-section__shell"><div class="split-section__header"><p class="split-section__label">How It Works</p><h2 class="split-section__heading">From Commit to Live in <em>Three Steps</em></h2><p class="split-section__lead">No release window, no runbook, and no meeting to decide whether today is a good day to deploy.</p></div><div class="split-section__panes" style="--aludra-split-media:46%"><!-- wp:group {"className":"split-section__media"} -->
 <div class="wp-block-group split-section__media"><!-- wp:aludra/load-waterfall {"siteUrl":"deploy · production","badge":"live in 0.9s","rowLabels":["resolve","build","test suite","artifacts","release","healthcheck"],"lcpLabel":"live 0.9s"} -->
 <figure class="wp-block-aludra-load-waterfall" aria-label="Load waterfall for deploy · production: live 0.9s"><figcaption class="wf-head"><span class="wf-url">deploy · production</span><span class="wf-badge">live in 0.9s</span></figcaption><div class="wf-rows"><div class="wf-row"><span>resolve</span><div class="wf-track"><i class="wf-bar is-doc" style="left:0%;width:22%;animation-delay:0.1s"></i></div></div><div class="wf-row"><span>build</span><div class="wf-track"><i class="wf-bar is-css" style="left:22%;width:14%;animation-delay:0.25s"></i></div></div><div class="wf-row"><span>test suite</span><div class="wf-track"><i class="wf-bar is-img" style="left:26%;width:26%;animation-delay:0.4s"></i></div></div><div class="wf-row"><span>artifacts</span><div class="wf-track"><i class="wf-bar" style="left:30%;width:18%;animation-delay:0.55s"></i></div></div><div class="wf-row"><span>release</span><div class="wf-track"><i class="wf-bar" style="left:52%;width:20%;animation-delay:0.7s"></i><b class="wf-lcp" style="left:52%"><span>live 0.9s</span></b></div></div><div class="wf-row"><span>healthcheck</span><div class="wf-track"><i class="wf-bar" style="left:72%;width:12%;animation-delay:0.85s"></i></div></div></div><div class="wf-axis"><span></span><span class="wf-ticks"><span>0s</span><span>0.5s</span><span>1.0s</span><span>1.5s</span></span></div></figure>
-<!-- /wp:aludra/load-waterfall --></div>
+<!-- /wp:aludra/load-waterfall -->
+
+<!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
+<p class="has-secondary-color has-text-color has-small-font-size">Median deploy over the last 30 days, from commit to healthcheck.</p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
 <!-- wp:group {"className":"split-section__content"} -->
