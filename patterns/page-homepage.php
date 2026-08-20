@@ -4,7 +4,7 @@
  * Slug: ixian/page-homepage
  * Categories: ixian
  * Block Types: core/post-content
- * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, a filterable architecture comparison table, capability cards, pricing, client quotes, a centered FAQ accordion, a plan-inclusions grid and a closing call to action.
+ * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, a filterable architecture comparison table, capability cards, pricing, client quotes, a centered FAQ accordion and a plan-inclusions grid.
  *
  * @package Ixian
  */
@@ -930,19 +930,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:group --></div>
 <!-- /wp:group --></div></div>
 <!-- /wp:aludra/icon-grid -->
-
-<!-- wp:aludra/cta-banner -->
-<div class="wp-block-aludra-cta-banner alignfull" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
-<h2 class="wp-block-heading cta-banner__title" style="line-height:1.2">Start shipping this afternoon.</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"className":"cta-banner__lead"} -->
-<p class="cta-banner__lead">Free for 14 days, no credit card, and an engineer on hand if you get stuck.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:buttons {"className":"cta-banner__ctas","layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons cta-banner__ctas"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Start Free Trial →</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div></div>
-<!-- /wp:aludra/cta-banner -->
