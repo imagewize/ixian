@@ -141,18 +141,42 @@ SITE_ROOT=~/code/imagewize.com/demo/web/app \
 not `cd` into the demo site to run this.** When the source argument is omitted the script defaults
 it to `$PWD` — so running this from inside the demo site rsyncs the entire Bedrock site *into*
 `themes/ixian/`, and because the sync uses `--delete --delete-excluded`, it wipes the real
-theme. Preview with `--dry-run` (before the `theme` argument) when unsure; if the output shows it
-deleting WordPress core (`web/wp/...`) or Bedrock files (`.env`, `config/`), the source argument is
-wrong — stop.
+theme. `--dry-run` can go anywhere on the command line (e.g. appended at the end); preview when
+unsure — if the output shows it deleting WordPress core (`web/wp/...`) or Bedrock files (`.env`,
+`config/`), the source argument is wrong, stop. Run `wp-ops rsync-package-to-site --help` for the
+full flag list if any of this needs re-checking.
 
 It rsyncs a dist-faithful tree (`--delete --delete-excluded`, honouring `.distignore`), so what
-you test is what ships; pass `plugin aludra` for the block library. A `composer update` on the
-demo site puts the released code back.
+you test is what ships; pass `plugin aludra` for the block library. `demo/web/app/themes/ixian/`
+is gitignored in the `imagewize.com` repo (`demo/.gitignore`) — rsyncing into it never produces
+anything to commit there; it's a throwaway preview of an uncommitted or unmerged local change.
 
 The script deliberately lives in wp-ops rather than here: its paths are personal configuration,
 not theme code, and Theme Check's `File_Check` rejects a theme that ships a `.sh` file at all.
 Elayne and Nynaeve keep their copies untracked for the same reason; `bin/sync-demo.sh` is
 gitignored here if you want a local shortcut.
+
+**Once a change is merged to `main`, make the demo track it officially with `composer update`
+instead of (or in addition to) rsyncing** — rsync's copy doesn't survive a `composer install`, so
+skipping this step means the next full install silently reverts the demo to the old pinned
+commit. The demo's `demo/composer.json` currently pins Ixian as `"imagewize/ixian": "dev-main"`
+(a private repo with no tags yet — this moves to a real version constraint on Ixian's first
+tagged release; see the "Update Elayne to 4.9.0 and add Ixian as a dev dependency" commit in
+`imagewize.com` for why), so `composer update` pulls whatever is currently on `main`, not a
+built release artifact:
+
+```bash
+cd ~/code/imagewize.com/demo
+composer update imagewize/ixian --no-interaction
+```
+
+This rewrites `demo/composer.lock`'s pinned commit hash. That file (and, in the rarer case the
+constraint itself changes, `composer.json`) is tracked in the **`imagewize.com`** repo — a
+separate repo from this one — so commit and push it there once the update looks right:
+
+```bash
+cd ~/code/imagewize.com && git add demo/composer.lock && git commit -m "Update Ixian to <commit/summary>" && git push
+```
 
 Run one-off WP-CLI commands against it with:
 
