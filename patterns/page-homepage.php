@@ -4,7 +4,7 @@
  * Slug: ixian/page-homepage
  * Categories: ixian
  * Block Types: core/post-content
- * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
+ * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, a filterable architecture comparison table, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
  *
  * @package Ixian
  */
@@ -208,6 +208,66 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:buttons --></div>
 <!-- /wp:group --></div></div></div>
 <!-- /wp:aludra/split-section -->
+
+<!-- wp:aludra/comparison-table -->
+<div class="wp-block-aludra-comparison-table alignfull" style="margin-top:0;margin-bottom:0"><div class="comparison-table__shell"><div class="comparison-table__header"><p class="comparison-table__eyebrow">Platform Architecture</p><h2 class="comparison-table__heading">Why We Built It <em>This Way</em>.</h2><p class="comparison-table__lead">A closer look at how the platform holds up against the alternatives teams actually migrate away from.</p></div><div class="comparison-table__pills"></div><div class="comparison-table__surface"><div class="comparison-table__row comparison-table__row--head"><div class="comparison-table__head-cell comparison-table__head-cell--param">Structural Parameter</div><div class="comparison-table__head-cell comparison-table__head-cell--ours">Ours</div><div class="comparison-table__head-cell comparison-table__head-cell--v1">Self-Hosted CI</div><div class="comparison-table__head-cell comparison-table__head-cell--v2">Legacy PaaS</div><div class="comparison-table__head-cell comparison-table__head-cell--v3">No-Code Builder</div></div>
+<!-- wp:aludra/comparison-row {"category":"Environments & Delivery"} -->
+<div class="wp-block-aludra-comparison-row comparison-row" data-category="Environments &amp; Delivery"><div class="comparison-row__param"><p class="comparison-row__label">Architecture</p><p class="comparison-row__key">system.engine</p></div>
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Git-Native, Zero Server</p><p class="comparison-cell__body">Push a branch, get a URL. Build, release and health check run on our edge — nothing to patch.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">A VM You Maintain</p><p class="comparison-cell__body">Runners, agents and OS patches are your job, on a schedule that competes with everything else.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Proprietary Build Queue</p><p class="comparison-cell__body">Deploys run on the vendor's own worker fleet, on their release cadence, not yours.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Closed Visual Engine</p><p class="comparison-cell__body">No build step to inspect. Output is whatever the drag-and-drop layer decided to emit.</p></div>
+<!-- /wp:aludra/comparison-cell --></div>
+<!-- /wp:aludra/comparison-row -->
+
+<!-- wp:aludra/comparison-row {"category":"Security & Access"} -->
+<div class="wp-block-aludra-comparison-row comparison-row" data-category="Security &amp; Access"><div class="comparison-row__param"><p class="comparison-row__label">Secrets &amp; Access</p><p class="comparison-row__key">audit.trail</p></div>
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Scoped, Short-Lived Tokens</p><p class="comparison-cell__body">Every credential is scoped to one environment and expires — an audit trail answers “who changed this?” in one click.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Long-Lived Shared Keys</p><p class="comparison-cell__body">One .env file, copied between machines, rotated only when someone remembers to.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Vendor-Held Secrets</p><p class="comparison-cell__body">Stored in the platform's own vault, with export tooling that lags the import tooling by design.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">No Secrets Concept</p><p class="comparison-cell__body">Credentials, if any, live in the same account as the site — no separation between build and runtime.</p></div>
+<!-- /wp:aludra/comparison-cell --></div>
+<!-- /wp:aludra/comparison-row -->
+
+<!-- wp:aludra/comparison-row {"category":"Observability & Integrations"} -->
+<div class="wp-block-aludra-comparison-row comparison-row" data-category="Observability &amp; Integrations"><div class="comparison-row__param"><p class="comparison-row__label">Observability</p><p class="comparison-row__key">insight.depth</p></div>
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">One Timeline, No Blind Spots</p><p class="comparison-cell__body">Logs, traces and metrics from the same timeline — a slow request is one click from the line that caused it.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Bolted-On Monitoring</p><p class="comparison-cell__body">A separate APM agent to install, configure and pay for, disconnected from your deploy logs.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">Basic Request Logs</p><p class="comparison-cell__body">Enough to see something broke, rarely enough to see why — deeper tracing is an upsell.</p></div>
+<!-- /wp:aludra/comparison-cell -->
+
+<!-- wp:aludra/comparison-cell -->
+<div class="wp-block-aludra-comparison-cell comparison-cell"><p class="comparison-cell__heading">No Observability</p><p class="comparison-cell__body">Uptime is the platform's problem to solve, invisibly — you get a status page, not a trace.</p></div>
+<!-- /wp:aludra/comparison-cell --></div>
+<!-- /wp:aludra/comparison-row --></div></div></div>
+<!-- /wp:aludra/comparison-table -->
 
 <!-- wp:aludra/spine-section -->
 <div class="wp-block-aludra-spine-section alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Platform</p><h2 class="spine-section__heading">One Platform, Six Fewer Tools.</h2><p class="spine-section__aside">Everything below ships on every plan — no add-ons, no per-seat surprises.</p></div><div class="spine-section__content"><!-- wp:aludra/feature-cards -->
