@@ -74,7 +74,7 @@ function ixian_enqueue_styles() {
 		'ixian-style',
 		get_template_directory_uri() . '/style.css',
 		array(),
-		wp_get_theme()->get( 'Version' )
+		(string) filemtime( get_template_directory() . '/style.css' )
 	);
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\ixian_enqueue_styles' );
