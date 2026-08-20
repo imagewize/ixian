@@ -4,7 +4,7 @@
  * Slug: ixian/page-homepage
  * Categories: ixian
  * Block Types: core/post-content
- * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, a filterable architecture comparison table, capability cards, pricing, client quotes, an FAQ accordion and a closing call to action.
+ * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, a filterable architecture comparison table, capability cards, pricing, client quotes, a centered FAQ accordion, a plan-inclusions grid and a closing call to action.
  *
  * @package Ixian
  */
@@ -799,8 +799,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/comparison-row --></div></div></div>
 <!-- /wp:aludra/comparison-table -->
 
-<!-- wp:aludra/spine-section {"tint":true} -->
-<div class="wp-block-aludra-spine-section is-tinted alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Questions</p><h2 class="spine-section__heading">Before You Sign Up.</h2><p class="spine-section__aside"></p></div><div class="spine-section__content"><!-- wp:aludra/faq-tabs {"displayMode":"native"} -->
+<!-- wp:group {"align":"full","backgroundColor":"base","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:group {"align":"wide","layout":{"type":"flex","orientation":"vertical","alignItems":"center","justifyContent":"center"},"style":{"spacing":{"blockGap":"8px"}}} -->
+<div class="wp-block-group alignwide"><!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"}}} -->
+<p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-weight:700;letter-spacing:0.08em;text-transform:uppercase">FAQ</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">Frequently Asked Questions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","textColor":"secondary"} -->
+<p class="has-text-align-center has-secondary-color has-text-color">Straight answers to the questions we hear most before a team signs up.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"align":"wide","backgroundColor":"white","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|large"},"margin":{"top":"var:preset|spacing|large"}}}} -->
+<div class="wp-block-group alignwide has-white-background-color has-background" style="border-radius:16px;margin-top:var(--wp--preset--spacing--large);padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--large)"><!-- wp:aludra/faq-tabs {"displayMode":"native"} -->
 <div class="wp-block-aludra-faq-tabs alignwide faq-tabs-wrapper is-display-mode-native" data-display-mode="native"><div class="faq-native"><!-- wp:aludra/faq-tab-answer {"question":"How long does migration take?","title":"Migration","displayMode":"native","openByDefault":true} -->
 <details class="wp-block-aludra-faq-tab-answer faq-tab-answer" data-question="How long does migration take?" open><summary>How long does migration take?</summary><div class="faq-answer-content"><!-- wp:paragraph -->
 <p>Most teams have their first project running the same afternoon. A full migration — every service, every environment — typically lands inside two weeks, and we do not charge for the overlap period while you run both.</p>
@@ -832,8 +847,89 @@ if ( ! defined( 'ABSPATH' ) ) {
 <p>Real engineers, not a ticket queue that reformats your question back at you. Team plans get a one-hour first response during business hours; Scale plans get a named engineer and an on-call escalation path.</p>
 <!-- /wp:paragraph --></div></details>
 <!-- /wp:aludra/faq-tab-answer --></div></div>
-<!-- /wp:aludra/faq-tabs --></div></div></div>
-<!-- /wp:aludra/spine-section -->
+<!-- /wp:aludra/faq-tabs --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:aludra/icon-grid {"align":"full"} -->
+<div class="wp-block-aludra-icon-grid alignfull"><div class="icon-grid__inner"><!-- wp:heading {"level":2,"textAlign":"center","className":"icon-grid__title"} -->
+<h2 class="wp-block-heading has-text-align-center icon-grid__title">Every Plan Includes</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"icon-grid__grid"} -->
+<div class="wp-block-group icon-grid__grid"><!-- wp:group {"className":"icon-grid__item"} -->
+<div class="wp-block-group icon-grid__item"><!-- wp:group {"className":"icon-grid__icon"} -->
+<div class="wp-block-group icon-grid__icon"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-map.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Migration playbook"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"icon-grid__text"} -->
+<p class="icon-grid__text"><strong>Migration Playbook</strong><br>A step-by-step plan tailored to your stack.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"icon-grid__item"} -->
+<div class="wp-block-group icon-grid__item"><!-- wp:group {"className":"icon-grid__icon"} -->
+<div class="wp-block-group icon-grid__icon"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-chat.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Onboarding call"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"icon-grid__text"} -->
+<p class="icon-grid__text"><strong>Onboarding Call</strong><br>A guided walkthrough with an engineer, not a bot.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"icon-grid__item"} -->
+<div class="wp-block-group icon-grid__item"><!-- wp:group {"className":"icon-grid__icon"} -->
+<div class="wp-block-group icon-grid__icon"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-bar-chart.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Usage reports"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"icon-grid__text"} -->
+<p class="icon-grid__text"><strong>Usage Reports</strong><br>A weekly digest of deploys, uptime and cost.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"icon-grid__item"} -->
+<div class="wp-block-group icon-grid__item"><!-- wp:group {"className":"icon-grid__icon"} -->
+<div class="wp-block-group icon-grid__icon"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-users.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Team training"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"icon-grid__text"} -->
+<p class="icon-grid__text"><strong>Team Training</strong><br>Get your whole team comfortable with the platform.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"icon-grid__item"} -->
+<div class="wp-block-group icon-grid__item"><!-- wp:group {"className":"icon-grid__icon"} -->
+<div class="wp-block-group icon-grid__icon"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-clock.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Priority support"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"icon-grid__text"} -->
+<p class="icon-grid__text"><strong>Priority Support</strong><br>Skip the queue with a one-hour response time.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"icon-grid__item"} -->
+<div class="wp-block-group icon-grid__item"><!-- wp:group {"className":"icon-grid__icon"} -->
+<div class="wp-block-group icon-grid__icon"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-shield.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Security review"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:paragraph {"className":"icon-grid__text"} -->
+<p class="icon-grid__text"><strong>Security Review</strong><br>A joint pass over access, secrets and audit logs.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:aludra/icon-grid -->
 
 <!-- wp:aludra/cta-banner -->
 <div class="wp-block-aludra-cta-banner alignfull" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
@@ -846,7 +942,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <!-- wp:buttons {"className":"cta-banner__ctas","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons cta-banner__ctas"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Start Free Trial</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Start Free Trial →</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div></div>
 <!-- /wp:aludra/cta-banner -->
