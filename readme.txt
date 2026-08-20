@@ -69,6 +69,14 @@ stay dormant when it is not active.
   recoloring, as the theme's logo mark. The required attribution notice is retained
   as a comment inside the SVG file.
 
+* Also used in: `parts/footer.html` (inline, as `wp:html` blocks rather than files)
+* Additional icons: "wordpress-simple" and "mastodon" (both Font Awesome Free
+  Brands, unmodified except for recoloring), labelling the "Made with WordPress"
+  credit and a Mastodon mention in the footer — decorative only, neither is a
+  link. Inlined directly in the template part's markup rather than as separate
+  SVG files under `assets/`, so the upstream attribution comment each ships with
+  lives here instead of inside the block markup.
+
 Distributed through the Blade Icons package, which is itself MIT-licensed
 (https://github.com/driesvints/blade-icons/blob/main/LICENSE.md). The MIT License
 covers the package; the icon artwork remains under CC BY 4.0.
