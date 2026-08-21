@@ -4,3 +4,6 @@ node_modules
 .env
 create-pr.sh
 bin/sync-demo.sh
+
+# Pattern validator run logs (@imwz/wp-pattern-sentinel)
+sentinel-*.log.json

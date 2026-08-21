@@ -10,5 +10,15 @@
 		"business"
 	],
 	"author": "Jasper Frumau",
-	"license": "GPL-3.0-or-later"
+	"license": "GPL-3.0-or-later",
+	"scripts": {
+		"setup": "npx playwright install chromium",
+		"validate": "sentinel --log patterns/",
+		"validate:file": "sentinel",
+		"validate:new": "sentinel --cache --log patterns/",
+		"validate:clear-cache": "sentinel --clear-cache"
+	},
+	"dependencies": {
+		"@imwz/wp-pattern-sentinel": "^1.1.0"
+	}
 }
