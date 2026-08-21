@@ -4,7 +4,7 @@
  * Slug: ixian/page-homepage
  * Categories: ixian
  * Block Types: core/post-content
- * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, a filterable architecture comparison table, capability cards, pricing, client quotes, a centered FAQ accordion and a plan-inclusions grid.
+ * Description: A full homepage for a service business or SaaS product — centered hero with a template search, trust bar, headline metrics, a three-step how-it-works split, a filterable architecture comparison table, persona and platform capability cards, a centered stack-compatibility capabilities section, pricing, client quotes, a centered FAQ accordion and a plan-inclusions grid.
  *
  * @package Ixian
  */
@@ -544,6 +544,72 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:group --></div></div>
 <!-- /wp:aludra/feature-cards --></div></div></div>
 <!-- /wp:aludra/spine-section -->
+
+<!-- wp:aludra/feature-cards -->
+<div class="wp-block-aludra-feature-cards alignfull"><div class="feature-cards__inner"><!-- wp:group {"className":"feature-cards__header","layout":{"type":"flex","orientation":"vertical","justifyContent":"center"}} -->
+<div class="wp-block-group feature-cards__header"><!-- wp:paragraph {"align":"center","className":"feature-cards__eyebrow"} -->
+<p class="has-text-align-center feature-cards__eyebrow">Capabilities</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":2,"textAlign":"center","style":{"typography":{"fontWeight":"800"}}} -->
+<h2 class="wp-block-heading has-text-align-center" style="font-weight:800">Built to Run What You're Already Building</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","className":"feature-cards__lead"} -->
+<p class="has-text-align-center feature-cards__lead">No rewrite required — bring the stack you already have, and it just deploys.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-cards__grid","layout":{"type":"default"}} -->
+<div class="wp-block-group feature-cards__grid"><!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-code.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Any framework"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Any Framework</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Next.js, Astro, Remix, or a plain static build — detected automatically, with nothing to configure by hand.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-link.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Any database"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Any Database</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bring a managed database or your own connection string — pooling and TLS are handled for you either way.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"feature-card","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group feature-card"><!-- wp:group {"className":"feature-card__icon-wrap","layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
+<div class="wp-block-group feature-card__icon-wrap"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-list.svg"}}}}} -->
+<figure class="wp-block-image size-full"><img src="" alt="Any workflow"/></figure>
+<!-- /wp:image --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"700"}}} -->
+<h4 class="wp-block-heading" style="font-weight:700">Any Workflow</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>GitHub, GitLab, or a bare git remote — the same preview-per-branch flow either way.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div></div>
+<!-- /wp:aludra/feature-cards -->
 
 <!-- wp:aludra/spine-section {"tint":true} -->
 <div class="wp-block-aludra-spine-section is-tinted alignfull" style="margin-top:0;margin-bottom:0"><div class="spine-section__shell"><div class="spine-section__spine"><p class="spine-section__label">Pricing</p><h2 class="spine-section__heading">Priced Per Project, Not Per Seat.</h2><p class="spine-section__aside">Every plan includes the full platform. Move up when you need more capacity, not more features.</p></div><div class="spine-section__content"><!-- wp:aludra/pricing-tiers {"backgroundColor":"","className":"is-style-spec-sheet"} -->
