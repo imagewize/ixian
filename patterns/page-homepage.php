@@ -799,7 +799,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/comparison-row --></div></div></div>
 <!-- /wp:aludra/comparison-table -->
 
-<!-- wp:group {"align":"full","backgroundColor":"base","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}}} -->
+<!-- wp:group {"align":"full","backgroundColor":"base","layout":{"type":"constrained"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}}} -->
 <div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical","alignItems":"center","justifyContent":"center"},"style":{"spacing":{"blockGap":"8px"}}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"}}} -->
 <p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-weight:700;letter-spacing:0.08em;text-transform:uppercase">FAQ</p>
