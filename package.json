@@ -3,12 +3,22 @@
 	"version": "1.0.0",
 	"description": "A lean full-site-editing theme for service businesses and SaaS companies, composed from the Aludra block library.",
 	"keywords": [
-		"wordpress",
+		"WordPress",
 		"theme",
 		"block-theme",
 		"saas",
 		"business"
 	],
 	"author": "Jasper Frumau",
-	"license": "GPL-3.0-or-later"
+	"license": "GPL-3.0-or-later",
+	"scripts": {
+		"setup": "npx playwright install chromium",
+		"validate": "sentinel --log patterns/",
+		"validate:file": "sentinel",
+		"validate:new": "sentinel --cache --log patterns/",
+		"validate:clear-cache": "sentinel --clear-cache"
+	},
+	"dependencies": {
+		"@imwz/wp-pattern-sentinel": "^1.1.0"
+	}
 }

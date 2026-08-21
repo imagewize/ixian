@@ -800,8 +800,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/comparison-table -->
 
 <!-- wp:group {"align":"full","backgroundColor":"base","style":{"spacing":{"padding":{"top":"var:preset|spacing|x-large","bottom":"var:preset|spacing|x-large"}}}} -->
-<div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:group {"align":"wide","layout":{"type":"flex","orientation":"vertical","alignItems":"center","justifyContent":"center"},"style":{"spacing":{"blockGap":"8px"}}} -->
-<div class="wp-block-group alignwide"><!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"}}} -->
+<div class="wp-block-group alignfull has-base-background-color has-background" style="padding-top:var(--wp--preset--spacing--x-large);padding-bottom:var(--wp--preset--spacing--x-large)"><!-- wp:group {"layout":{"type":"flex","orientation":"vertical","alignItems":"center","justifyContent":"center"},"style":{"spacing":{"blockGap":"8px"}}} -->
+<div class="wp-block-group"><!-- wp:paragraph {"align":"center","textColor":"primary","fontSize":"small","style":{"typography":{"fontWeight":"700","letterSpacing":"0.08em","textTransform":"uppercase"}}} -->
 <p class="has-text-align-center has-primary-color has-text-color has-small-font-size" style="font-weight:700;letter-spacing:0.08em;text-transform:uppercase">FAQ</p>
 <!-- /wp:paragraph -->
 
@@ -814,9 +814,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"align":"wide","backgroundColor":"white","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|large"},"margin":{"top":"var:preset|spacing|large"}}}} -->
-<div class="wp-block-group alignwide has-white-background-color has-background" style="border-radius:16px;margin-top:var(--wp--preset--spacing--large);padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--large)"><!-- wp:aludra/faq-tabs {"displayMode":"native"} -->
-<div class="wp-block-aludra-faq-tabs alignwide faq-tabs-wrapper is-display-mode-native" data-display-mode="native"><div class="faq-native"><!-- wp:aludra/faq-tab-answer {"question":"How long does migration take?","title":"Migration","displayMode":"native","openByDefault":true} -->
+<!-- wp:group {"backgroundColor":"white","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|large","right":"var:preset|spacing|large","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|large"},"margin":{"top":"var:preset|spacing|large"}}}} -->
+<div class="wp-block-group has-white-background-color has-background" style="border-radius:16px;margin-top:var(--wp--preset--spacing--large);padding-top:var(--wp--preset--spacing--large);padding-right:var(--wp--preset--spacing--large);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--large)"><!-- wp:aludra/faq-tabs {"align":"","displayMode":"native"} -->
+<div class="wp-block-aludra-faq-tabs faq-tabs-wrapper is-display-mode-native" data-display-mode="native"><div class="faq-native"><!-- wp:aludra/faq-tab-answer {"question":"How long does migration take?","title":"Migration","displayMode":"native","openByDefault":true} -->
 <details class="wp-block-aludra-faq-tab-answer faq-tab-answer" data-question="How long does migration take?" open><summary>How long does migration take?</summary><div class="faq-answer-content"><!-- wp:paragraph -->
 <p>Most teams have their first project running the same afternoon. A full migration — every service, every environment — typically lands inside two weeks, and we do not charge for the overlap period while you run both.</p>
 <!-- /wp:paragraph -->
