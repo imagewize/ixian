@@ -99,6 +99,39 @@ composer run wpcs:scan  # PHPCS against phpcs.xml (WordPress standard)
 composer run wpcs:fix   # PHPCBF auto-fix
 ```
 
+`package.json` exists only for the pattern-validation harness below — it is not a build step, and
+ships no runtime JS.
+
+### Pattern validation
+
+Every `patterns/page-*.php` file is hand-authored markup, not editor-generated — so it can drift
+from what a block's real `save()` function produces without anyone noticing until it's inserted in
+the editor. `wp pattern validate`'s PHP `parse_blocks()` pass does **not** run Gutenberg's
+JavaScript `save()` function, so it misses issues the JS serializer alone produces: class-ordering,
+a block's own attribute defaults (e.g. `aludra/faq-tabs` defaults `align` to `"wide"` — a pattern
+that wants the block unaligned must say `"align":""` explicitly, or the save-time class won't match
+hand-written markup that omits `alignwide`), auto-injected styles. **Validate with
+`wp-pattern-sentinel` after every pattern edit, not just once at the end** — it launches a real
+browser, logs into WP admin on the actual Trellis VM install, inserts the pattern into a draft
+page, saves it, and reads back the real validation/content-mismatch result:
+
+```bash
+npm install
+npm run setup            # npx playwright install chromium, once
+
+# from ~/code/ixian — always against the Trellis VM demo install (see
+# "Testing on the demo site" below), never a bare --url
+sentinel --trellis --trellis-dir=$HOME/code/imagewize.com/trellis \
+  --site=demo.imagewize.com --subsite=ixian patterns/page-homepage.php   # single file
+
+sentinel --trellis --trellis-dir=$HOME/code/imagewize.com/trellis \
+  --site=demo.imagewize.com --subsite=ixian patterns/                   # everything
+```
+
+The `npm run validate*` scripts in `package.json` wrap the same `sentinel` binary for the
+all-patterns case; pass `--trellis ...` flags after `--` or add a local gitignored `.env`
+(`WP_URL`/`WP_USER`/`WP_PASS`) if you want to skip retyping them, matching Elayne's convention.
+
 ### Where docs and design mockups live
 
 **Not in this repo.** Planning documents, roadmaps and HTML design mockups belong in the
