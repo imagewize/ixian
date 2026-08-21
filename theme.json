@@ -133,7 +133,7 @@
 				"control-border": "#79879E"
 			},
 			"spacing": {
-				"content-padding": "clamp(1rem, 4vw, 2rem)"
+				"content-padding": "clamp(1.25rem, 4vw, 3rem)"
 			}
 		},
 		"layout": {
