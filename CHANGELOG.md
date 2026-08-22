@@ -7,29 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.2.0] - 2026-08-22
-
-### Changed
-- Cta Banner on About, Portfolio and Pricing now uses Aludra's new `light` style
-  (requires Aludra 2.34.0+) in place of the manual Tertiary-background/Contrast-text
-  repalette introduced in 1.1.0 — same look, but as a real, reusable block style
-  instead of a per-pattern colour override.
-
-## [1.1.0] - 2026-08-22
-
-### Changed
-- Homepage was the only starter pattern that opted into each Aludra block's light
-  style variant, so About, Portfolio and Pricing opened on a dark Hero Banner and
-  closed on a saturated Cta Banner that clashed with the rest of the light,
-  restrained design system. Hero Banner now uses the `canvas` style (matching the
-  homepage) on all three, About's Stat Rail now uses the `light` style, and Cta
-  Banner is repaletted to a Tertiary band with a Contrast heading and a
-  Primary-filled button, rather than its saturated Primary default.
-- Contact page now uses Aludra Contact Section's new `light` style (requires
-  Aludra 2.33.0+), for the same reason — the block's dark default was the one
-  remaining page that didn't fit the site's light design system.
-
-## [1.0.0] - 2026-08-18
+## [1.0.0] - 2026-08-22
 
 Initial release. Ixian is forked from [Aviendha](https://github.com/imagewize/aviendha)
 1.15.0 and re-aimed at service businesses and SaaS companies. It inherits Aviendha's
@@ -45,8 +23,12 @@ and page composition diverge from here.
 - WooCommerce block templates, guarded so they are hidden and unloaded when
   WooCommerce is not active.
 - **Homepage pattern** (`patterns/page-homepage.php`) — a full page composed from the
-  Aludra block library: split hero, trust bar, stat rail, capability cards, pricing
-  tiers, client quotes, FAQ accordion and a closing call to action. Ixian-flavoured
+  Aludra block library: a centered hero with a template search bar, trust bar,
+  headline metrics, a three-step how-it-works split section with a live load
+  waterfall, an old-stack-vs-platform comparison, a filterable architecture
+  comparison table, persona and platform capability cards, a stack-compatibility
+  capabilities section, spec-sheet pricing tiers, client quotes, a short-form feature
+  comparison table, a native FAQ accordion and a plan-inclusions grid. Ixian-flavoured
   copy and layout live here rather than in shared Aludra, for the same reason the
   palette lives here rather than in shared Aviendha.
 - **`ixian` block pattern category**, registered on `init`. Patterns declaring
@@ -58,8 +40,8 @@ and page composition diverge from here.
 - **About pattern** (`patterns/page-about.php`) — hero with dual CTAs, trust bar,
   company story, headline metrics, team capability cards, client quotes and a closing
   call to action.
-- **Contact pattern** (`patterns/page-contact.php`) — dark contact section with an
-  intro, contact details, an availability badge, and a Contact Form 7 form card.
+- **Contact pattern** (`patterns/page-contact.php`) — contact section with an intro,
+  contact details, an availability badge, and a Contact Form 7 form card.
 - **Portfolio pattern** (`patterns/page-portfolio.php`) — intro hero, trust bar, a
   client-site rail carousel, reasons teams switch as capability cards, and a closing
   call to action.
@@ -87,11 +69,19 @@ and page composition diverge from here.
   stylesheet handles all move from `aviendha`/`Aviendha` to `ixian`/`Ixian`.
 - Footer tagline no longer reads "WordPress & WooCommerce" — WooCommerce is an optional
   dependency here, not the theme's subject.
+- Hero Banner (homepage, About, Portfolio, Pricing), Stat Rail (homepage, About),
+  Contact Section (Contact) and Cta Banner (About, Portfolio, Pricing) all use
+  Aludra's `canvas`/`light` block styles instead of each block's saturated default,
+  so every starter pattern shares the same light, restrained design system. Requires
+  Aludra 2.33.0+ for the Contact Section light style and 2.34.0+ for the Cta Banner
+  light style.
 
 ### Known issues
-- On the dark stat rail, the "good" figure inherits Aludra's
-  `var(--wp--preset--color--accent)`, which resolves to Ixian's `#0E7490` at 3.06:1
-  against the `main` band — below the 4.5:1 WCAG AA needs at that size and weight.
-  Aviendha 1.15.0 has the same defect (3.31:1). The fix belongs in Aludra as a
-  themeable custom property rather than as a theme-side override of Aludra's
-  selectors.
+- The Stat Rail block's default (dark) style has an accessibility defect: the "good"
+  figure inherits Aludra's `var(--wp--preset--color--accent)`, which resolves to
+  Ixian's `#0E7490` at 3.06:1 against the dark `main` band — below the 4.5:1 WCAG AA
+  needs at that size and weight. Aviendha 1.15.0 has the same defect (3.31:1). Every
+  Stat Rail Ixian's own patterns ship uses the `light` style instead, which does not
+  have this defect — it only bites a site that adds a Stat Rail via the block
+  inserter without the light style. The fix belongs in Aludra as a themeable custom
+  property rather than as a theme-side override of Aludra's selectors.
