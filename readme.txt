@@ -4,7 +4,7 @@ Tags: full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.2.0
+Stable tag: 1.0.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,26 +43,23 @@ stay dormant when it is not active.
 
 == Changelog ==
 
-= 1.2.0 =
-* Cta Banner on About, Portfolio and Pricing now uses Aludra's new `light` style (requires Aludra 2.34.0+) in place of the manual Tertiary/Contrast repalette introduced in 1.1.0 — same look, as a reusable block style instead of a per-pattern override.
-
-= 1.1.0 =
-* Hero Banner on About, Portfolio and Pricing now uses the `canvas` style, matching the homepage, instead of the dark default that clashed with the rest of the site.
-* About's Stat Rail now uses the `light` style, matching the homepage.
-* Cta Banner across About, Portfolio and Pricing is repaletted to a Tertiary band with a Contrast heading and a Primary-filled button, rather than its saturated Primary default.
-* Contact page now uses Aludra Contact Section's new `light` style (requires Aludra 2.33.0+), matching the site's light design system.
-
 = 1.0.0 =
 * Initial release. Forked from Aviendha 1.15.0 and re-aimed at service businesses and SaaS companies.
 * Inherits the `theme.json` design system, block templates, template parts and the `twilight` style variation.
+* New graphite-and-indigo palette, replacing Aviendha's warm rose-on-cream scheme; all colour pairs meet WCAG 2.1 AA.
 * Renamed throughout: text domain, function prefixes, CSS class hooks, asset slugs and stylesheet handles.
 * New logo mark (Font Awesome Free "robot", see Third-Party Libraries below); Aviendha's rose mark removed.
 * WooCommerce templates retained, guarded so they stay dormant when WooCommerce is not active.
-* Homepage starter pattern composed from the Aludra block library — split hero, trust bar, stat rail,
-  capability cards, pricing tiers, client quotes, FAQ accordion and closing call to action.
+* Homepage starter pattern composed from the Aludra block library — a centered hero with a template
+  search bar, trust bar, headline metrics, a how-it-works split section, an architecture comparison
+  table, persona and platform capability cards, pricing tiers, client quotes, a FAQ accordion and a
+  plan-inclusions grid.
 * Pricing, About, Contact and Portfolio starter patterns, rounding out the full-page pattern set.
 * Registers the `ixian` block pattern category so theme patterns are filed under a labelled heading
   in the inserter.
+* Hero Banner, Stat Rail, Contact Section and Cta Banner across the starter patterns use Aludra's
+  `canvas`/`light` block styles for a consistent, light design system (requires Aludra 2.33.0+ for
+  the Contact Section light style and 2.34.0+ for the Cta Banner light style).
 * Footer tagline reworded from "WordPress & WooCommerce" to suit a theme where WooCommerce is
   optional.
 
