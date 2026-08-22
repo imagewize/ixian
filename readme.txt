@@ -4,7 +4,7 @@ Tags: full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,12 @@ stay dormant when it is not active.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.1.0 =
+* Hero Banner on About, Portfolio and Pricing now uses the `canvas` style, matching the homepage, instead of the dark default that clashed with the rest of the site.
+* About's Stat Rail now uses the `light` style, matching the homepage.
+* Cta Banner across About, Portfolio and Pricing is repaletted to a Tertiary band with a Contrast heading and a Primary-filled button, rather than its saturated Primary default.
+* Contact page now uses Aludra Contact Section's new `light` style (requires Aludra 2.33.0+), matching the site's light design system.
 
 = 1.0.0 =
 * Initial release. Forked from Aviendha 1.15.0 and re-aimed at service businesses and SaaS companies.

@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-22
+
+### Changed
+- Homepage was the only starter pattern that opted into each Aludra block's light
+  style variant, so About, Portfolio and Pricing opened on a dark Hero Banner and
+  closed on a saturated Cta Banner that clashed with the rest of the light,
+  restrained design system. Hero Banner now uses the `canvas` style (matching the
+  homepage) on all three, About's Stat Rail now uses the `light` style, and Cta
+  Banner is repaletted to a Tertiary band with a Contrast heading and a
+  Primary-filled button, rather than its saturated Primary default.
+- Contact page now uses Aludra Contact Section's new `light` style (requires
+  Aludra 2.33.0+), for the same reason — the block's dark default was the one
+  remaining page that didn't fit the site's light design system.
+
 ## [1.0.0] - 2026-08-18
 
 Initial release. Ixian is forked from [Aviendha](https://github.com/imagewize/aviendha)
