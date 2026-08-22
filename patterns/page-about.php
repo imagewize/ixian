@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- wp:aludra/hero-banner -->
-<div class="wp-block-aludra-hero-banner alignfull" style="margin-top:0;margin-bottom:0"><div class="hero-banner__content"><!-- wp:group {"className":"hero-banner__eyebrow","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
+<!-- wp:aludra/hero-banner {"className":"is-style-canvas"} -->
+<div class="wp-block-aludra-hero-banner alignfull is-style-canvas" style="margin-top:0;margin-bottom:0"><div class="hero-banner__content"><!-- wp:group {"className":"hero-banner__eyebrow","style":{"spacing":{"blockGap":"8px"}},"layout":{"type":"flex","alignItems":"center","flexWrap":"nowrap"}} -->
 <div class="wp-block-group hero-banner__eyebrow"><!-- wp:image {"sizeSlug":"full","linkDestination":"none","metadata":{"bindings":{"url":{"source":"aludra/icon","args":{"path":"icon-users.svg"}}}}} -->
 <figure class="wp-block-image size-full"><img src="" alt=""/></figure>
 <!-- /wp:image -->
@@ -117,8 +117,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/about --></div></div></div>
 <!-- /wp:aludra/spine-section -->
 
-<!-- wp:aludra/stat-rail -->
-<div class="wp-block-aludra-stat-rail alignfull" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"2021","caption":"Founded, first deploy shipped the same year","good":true} -->
+<!-- wp:aludra/stat-rail {"className":"is-style-light"} -->
+<div class="wp-block-aludra-stat-rail alignfull is-style-light" style="margin-top:0;margin-bottom:0"><div class="stat-rail__shell"><!-- wp:aludra/stat-item {"number":"2021","caption":"Founded, first deploy shipped the same year","good":true} -->
 <div class="wp-block-aludra-stat-item stat-rail__item is-good"><div class="stat-rail__num">2021</div><div class="stat-rail__cap">Founded, first deploy shipped the same year</div></div>
 <!-- /wp:aludra/stat-item -->
 
@@ -237,8 +237,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/review-profiles --></div></div></div>
 <!-- /wp:aludra/spine-section -->
 
-<!-- wp:aludra/cta-banner -->
-<div class="wp-block-aludra-cta-banner alignfull" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
+<!-- wp:aludra/cta-banner {"backgroundColor":"tertiary","textColor":"contrast"} -->
+<div class="wp-block-aludra-cta-banner alignfull has-contrast-color has-tertiary-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
 <h2 class="wp-block-heading cta-banner__title" style="line-height:1.2">Come build with us.</h2>
 <!-- /wp:heading -->
 
@@ -247,8 +247,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"cta-banner__ctas","layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons cta-banner__ctas"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#">Start Free Trial</a></div>
+<div class="wp-block-buttons cta-banner__ctas"><!-- wp:button {"backgroundColor":"primary","textColor":"white","className":"is-style-fill"} -->
+<div class="wp-block-button is-style-fill"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background wp-element-button" href="#">Start Free Trial</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div></div>
 <!-- /wp:aludra/cta-banner -->
