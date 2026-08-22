@@ -4,7 +4,7 @@
  * Slug: ixian/page-contact
  * Categories: ixian
  * Block Types: core/post-content
- * Description: A contact page — dark contact section with an intro, contact details with icons, an availability badge, and a Contact Form 7 form card.
+ * Description: A contact page — light contact section with an intro, contact details with icons, an availability badge, and a Contact Form 7 form card.
  *
  * @package Ixian
  */
@@ -13,8 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 ?>
-<!-- wp:aludra/contact-section -->
-<div class="wp-block-aludra-contact-section alignfull" style="margin-top:0;margin-bottom:0"><div class="contact-section__inner"><!-- wp:group {"className":"contact-section__intro","style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"constrained"}} -->
+<!-- wp:aludra/contact-section {"className":"is-style-light"} -->
+<div class="wp-block-aludra-contact-section alignfull is-style-light" style="margin-top:0;margin-bottom:0"><div class="contact-section__inner"><!-- wp:group {"className":"contact-section__intro","style":{"spacing":{"blockGap":"16px"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group contact-section__intro"><!-- wp:paragraph {"className":"contact-section__label"} -->
 <p class="contact-section__label">Contact us</p>
 <!-- /wp:paragraph -->
