@@ -235,8 +235,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <!-- /wp:aludra/faq-tabs --></div></div></div>
 <!-- /wp:aludra/spine-section -->
 
-<!-- wp:aludra/cta-banner {"backgroundColor":"tertiary","textColor":"contrast"} -->
-<div class="wp-block-aludra-cta-banner alignfull has-contrast-color has-tertiary-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
+<!-- wp:aludra/cta-banner {"className":"is-style-light"} -->
+<div class="wp-block-aludra-cta-banner alignfull is-style-light" style="margin-top:0;margin-bottom:0"><div class="cta-banner__content"><!-- wp:heading {"className":"cta-banner__title","style":{"typography":{"lineHeight":"1.2"}}} -->
 <h2 class="wp-block-heading cta-banner__title" style="line-height:1.2">Still deciding which plan?</h2>
 <!-- /wp:heading -->
 
