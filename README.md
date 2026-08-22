@@ -3,6 +3,16 @@
 </p>
 <div align="center">
 <h1>Ixian</h1>
+</div>
+<div align="center">
+
+[![Total Downloads](https://img.shields.io/packagist/dt/imagewize/ixian.svg)](https://packagist.org/packages/imagewize/ixian)
+[![Latest Stable Version](https://img.shields.io/packagist/v/imagewize/ixian.svg)](https://packagist.org/packages/imagewize/ixian)
+[![License](https://img.shields.io/packagist/l/imagewize/ixian.svg)](https://packagist.org/packages/imagewize/ixian)
+[![Theme Check](https://github.com/imagewize/ixian/actions/workflows/theme-check.yml/badge.svg)](https://github.com/imagewize/ixian/actions/workflows/theme-check.yml)
+
+</div>
+<div align="center">
 
 A lean full-site-editing theme for service businesses and SaaS companies.
 </div>
