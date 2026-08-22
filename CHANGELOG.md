@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-08-22
+
+### Changed
+- Cta Banner on About, Portfolio and Pricing now uses Aludra's new `light` style
+  (requires Aludra 2.34.0+) in place of the manual Tertiary-background/Contrast-text
+  repalette introduced in 1.1.0 — same look, but as a real, reusable block style
+  instead of a per-pattern colour override.
+
 ## [1.1.0] - 2026-08-22
 
 ### Changed

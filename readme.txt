@@ -4,7 +4,7 @@ Tags: full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,9 @@ stay dormant when it is not active.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.2.0 =
+* Cta Banner on About, Portfolio and Pricing now uses Aludra's new `light` style (requires Aludra 2.34.0+) in place of the manual Tertiary/Contrast repalette introduced in 1.1.0 — same look, as a reusable block style instead of a per-pattern override.
 
 = 1.1.0 =
 * Hero Banner on About, Portfolio and Pricing now uses the `canvas` style, matching the homepage, instead of the dark default that clashed with the rest of the site.
