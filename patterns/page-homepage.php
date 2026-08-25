@@ -33,8 +33,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <p class="has-text-align-center hero-banner__lead">Everything your team needs to build, deploy and monitor in one place — without stitching together six tools that were never meant to talk to each other.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:group {"style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|medium","right":"var:preset|spacing|2-x-small"}}},"borderColor":"border-light","backgroundColor":"white","layout":{"type":"flex","alignItems":"center","justifyContent":"space-between","flexWrap":"nowrap"}} -->
-<div class="wp-block-group has-border-color has-border-light-border-color has-white-background-color has-background" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--2-x-small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
+<!-- wp:group {"className":"hero-banner__search","style":{"border":{"radius":"100px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|2-x-small","bottom":"var:preset|spacing|2-x-small","left":"var:preset|spacing|medium","right":"var:preset|spacing|2-x-small"}}},"borderColor":"border-light","backgroundColor":"white","layout":{"type":"flex","alignItems":"center","justifyContent":"space-between","flexWrap":"nowrap"}} -->
+<div class="wp-block-group hero-banner__search has-border-color has-border-light-border-color has-white-background-color has-background" style="border-width:1px;border-radius:100px;padding-top:var(--wp--preset--spacing--2-x-small);padding-right:var(--wp--preset--spacing--2-x-small);padding-bottom:var(--wp--preset--spacing--2-x-small);padding-left:var(--wp--preset--spacing--medium)"><!-- wp:paragraph {"textColor":"secondary","fontSize":"small"} -->
 <p class="has-secondary-color has-text-color has-small-font-size">What are you building? Landing page, online store, portfolio…</p>
 <!-- /wp:paragraph -->
 

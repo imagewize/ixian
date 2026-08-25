@@ -45,6 +45,8 @@ Ixian is distributed under the terms of the GNU GPL.
  *    6.6 Related posts
  *    6.7 Comments
  *    6.8 Reading-progress bar
+ * 7. Homepage
+ *    7.1 Hero search bar
  */
 
 /* -------------------------------------------------------------------------
@@ -1015,5 +1017,43 @@ body .ixian-header--dark .wp-block-site-logo {
 @keyframes ixian-read-progress {
 	to {
 		transform: scaleX(1);
+	}
+}
+
+/* -------------------------------------------------------------------------
+ * 7. Homepage
+ * ------------------------------------------------------------------------- */
+
+/* 7.1 Hero search bar
+ * ------------------------------------------------------------------------- */
+
+/*
+ * patterns/page-homepage.php's hero pill (`hero-banner__search`) pairs a
+ * placeholder paragraph with a "Browse Templates" button in one
+ * `flexWrap: "nowrap"` row, so the 100px pill radius reads as a single
+ * search-bar control. Below the width where both fit on one line, `nowrap`
+ * has no room to give the button — flex-shrink squeezes it down to nothing,
+ * and its own label wraps across several lines inside a now near-square
+ * blob instead of moving to a line of its own.
+ *
+ * Stack the two on mobile instead, full width, with a corner radius sized
+ * for a stacked card rather than a one-line pill.
+ */
+@media (max-width: 600px) {
+	.wp-block-group.hero-banner__search {
+		align-items: stretch;
+		border-radius: 20px;
+		flex-direction: column;
+		padding: var(--wp--preset--spacing--x-small);
+	}
+
+	.hero-banner__search .wp-block-buttons,
+	.hero-banner__search .wp-block-button,
+	.hero-banner__search .wp-block-button__link {
+		width: 100%;
+	}
+
+	.hero-banner__search .wp-block-button__link {
+		text-align: center;
 	}
 }
