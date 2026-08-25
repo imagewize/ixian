@@ -396,6 +396,31 @@ body .ixian-header--dark .wp-block-site-logo {
 }
 
 /*
+ * Core shrink-wraps the overlay's link list to its own content width, then
+ * right-aligns that shrink-wrapped box against the modal's already-padded
+ * edge (`align-items: flex-end` on the container-content, matching the
+ * collapsed hamburger's own justification) — the same edge inset the close
+ * button sits inside. Right-anchoring a shrink-wrapped box that way is
+ * fragile: anything that widens the list past its measured content width
+ * (a longer translated label, a larger accessibility text-size setting)
+ * pushes its edge past the modal boundary with no margin to absorb it, and
+ * the link reads as clipped against the screen edge.
+ *
+ * Stretch the list to the full padded content width instead, then
+ * right-align each link's own text inside that guaranteed box. The list can
+ * no longer be wider than the box it's aligned within, so its edge — and
+ * the close button's — stay pinned to the same padded inset regardless of
+ * label length.
+ */
+.ixian-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	align-items: stretch;
+}
+
+.ixian-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+	text-align: right;
+}
+
+/*
  * The dark header's navigation has no background of its own, so core's
  * `.wp-block-navigation:not(.has-background) …is-menu-open` rule paints the
  * mobile overlay white — while the block's `textColor: "base"` keeps the
