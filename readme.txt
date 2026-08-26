@@ -4,7 +4,7 @@ Tags: full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,11 @@ stay dormant when it is not active.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fixed: Mobile nav overlay link list no longer overflows past the modal edge on longer labels or larger accessibility text sizes.
+* Fixed: Hero search bar stacks on mobile instead of squeezing the "Browse Templates" button into a near-square blob.
+* Fixed: Mobile nav overlay close button now opens where the hamburger was, instead of flush against the screen's top-right corner.
 
 = 1.0.0 =
 * Initial release. Forked from Aviendha 1.15.0 and re-aimed at service businesses and SaaS companies.

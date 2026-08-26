@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-08-26
+
+### Fixed
+- Mobile nav overlay link list no longer overflows past the modal edge. Core shrink-wrapped the
+  list to its own content width and right-aligned that box against the modal's padded edge — a
+  longer translated label or a larger accessibility text-size setting could push it past the
+  boundary with no margin to absorb it. The list now stretches to the full padded content width,
+  with each link's text right-aligned inside it.
+- Hero search bar (`patterns/page-homepage.php`) stacks on mobile instead of squeezing the
+  "Browse Templates" button. The pill paired a placeholder paragraph with the button in one
+  `flexWrap: nowrap` row; below the width where both fit on one line, the button had no room and
+  shrank until its own label wrapped across several lines inside a near-square blob.
+- Mobile nav overlay close button now opens where the hamburger was. Core insets the overlay from
+  the screen edge via `--wp--style--root--padding-*` custom properties that
+  `settings.useRootPaddingAwareAlignments` is meant to supply; they resolved to nothing usable
+  here, so the overlay's own padding collapsed to 0 and the close button landed flush against the
+  literal top-right corner of the screen. The overlay now gets the header's own padding directly.
+
 ## [1.0.0] - 2026-08-22
 
 Initial release. Ixian is forked from [Aviendha](https://github.com/imagewize/aviendha)
