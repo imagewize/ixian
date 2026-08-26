@@ -423,6 +423,25 @@ body .ixian-header--dark .wp-block-site-logo {
 }
 
 /*
+ * Core insets the overlay (and, with it, the close button pinned to its
+ * top-right corner) from the screen edge via the `--wp--style--root--padding-*`
+ * custom properties that `settings.useRootPaddingAwareAlignments` is meant to
+ * supply. Here they resolve to nothing usable, so the overlay's own padding
+ * collapses to 0 and the close button lands flush against the literal
+ * top-right corner of the screen — well above and outside of where the
+ * hamburger it replaces actually sits.
+ *
+ * Give the overlay the header's own padding directly instead of relying on
+ * that chain, so the close button opens right where the hamburger was. This
+ * also becomes the right-hand inset the link list (§ above) stretches
+ * against, keeping both edges aligned.
+ */
+.ixian-header .wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--preset--spacing--small);
+	padding-right: var(--wp--preset--spacing--small);
+}
+
+/*
  * The dark header's navigation has no background of its own, so core's
  * `.wp-block-navigation:not(.has-background) …is-menu-open` rule paints the
  * mobile overlay white — while the block's `textColor: "base"` keeps the
