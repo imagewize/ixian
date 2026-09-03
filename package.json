@@ -1,6 +1,6 @@
 {
 	"name": "ixian",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "A lean full-site-editing theme for service businesses and SaaS companies, composed from the Aludra block library.",
 	"keywords": [
 		"WordPress",
@@ -19,6 +19,6 @@
 		"validate:clear-cache": "sentinel --clear-cache"
 	},
 	"dependencies": {
-		"@imwz/wp-pattern-sentinel": "^1.1.0"
+		"@imwz/wp-pattern-sentinel": "^1.1.1"
 	}
 }
