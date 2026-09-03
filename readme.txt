@@ -4,7 +4,7 @@ Tags: full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,9 @@ stay dormant when it is not active.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.0.2 =
+* Security: Bumped the `@imwz/wp-pattern-sentinel` dev dependency to 1.1.1, which pulls in a `js-yaml` fix for GHSA-5p4m-2wfm-xmqj, a quadratic CPU consumption (DoS) bug in `!!omap` YAML resolution. `js-yaml` is only used by sentinel's `--trellis` auto-discovery of `wordpress_sites.yml`; nothing in this theme's own runtime is affected.
 
 = 1.0.1 =
 * Fixed: Mobile nav overlay link list no longer overflows past the modal edge on longer labels or larger accessibility text sizes.
