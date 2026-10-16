@@ -44,7 +44,7 @@ from the Aludra block library.
   as the explicit third (source) argument — do **not** `cd` into the demo site first:
   ```bash
   SITE_ROOT=/Users/j/code/imagewize.com/demo/web/app \
-    bash ~/code/wp-ops/scripts/rsync-package-to-site.sh theme ixian /Users/j/code/ixian
+    bash ~/code/wp-ops/scripts/sync/rsync-package-to-site.sh theme ixian /Users/j/code/ixian
   ```
 
   **Critical — omitting that source argument wipes the theme.** The script defaults the source to
