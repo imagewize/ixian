@@ -4,7 +4,7 @@ Tags: full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, 
 Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 8.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,9 @@ stay dormant when it is not active.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.0.3 =
+* Fixed: the GitHub release zip now wraps the theme in its own `ixian/` folder, so uploading it on WordPress 7.1.4 or later no longer installs the theme in a randomly named folder.
 
 = 1.0.2 =
 * Security: Bumped the `@imwz/wp-pattern-sentinel` dev dependency to 1.1.1, which pulls in a `js-yaml` fix for GHSA-5p4m-2wfm-xmqj, a quadratic CPU consumption (DoS) bug in `!!omap` YAML resolution. `js-yaml` is only used by sentinel's `--trellis` auto-discovery of `wordpress_sites.yml`; nothing in this theme's own runtime is affected.
