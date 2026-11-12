@@ -233,7 +233,10 @@ Two checks run on GitHub, both mirroring Elayne's:
 ### Release packaging
 
 Publishing a GitHub release triggers `.github/workflows/create-release.yml`, which zips the theme
-with `zip -x@.distignore` and attaches it to the release. Anything that should not reach an
+with `zip -x@.distignore`, wraps it in a top-level `ixian/` folder and attaches it to the release.
+The folder matters: since WordPress 7.1.4 a flat zip uploaded in wp-admin installs as
+`ixian-<16 random characters>`. After changing the workflow, check the release with `unzip -l` (first
+path must start with `ixian/`). Anything that should not reach an
 installed site belongs in `.distignore` — and, so source archives match, in `.gitattributes` as
 `export-ignore`. Keep the two in step.
 
