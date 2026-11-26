@@ -2,9 +2,9 @@
 Contributors: Rhand
 Tags: full-site-editing, custom-colors, custom-logo, custom-menu, editor-style, featured-images, grid-layout, template-editing, translation-ready, wide-blocks
 Requires at least: 6.6
-Tested up to: 7.1
+Tested up to: 7.2
 Requires PHP: 8.0
-Stable tag: 1.0.3
+Stable tag: 1.1.0
 License: GNU General Public License v3.0 (or later)
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -42,6 +42,10 @@ stay dormant when it is not active.
 4. Install and activate WooCommerce for store functionality.
 
 == Changelog ==
+
+= 1.1.0 =
+* Tested: confirmed compatible with WordPress 7.2 — verified on the demo subsite (demo.imagewize.test/ixian/) running 7.2-RC3: all templates render cleanly and all block patterns validate in the editor.
+* Changed: bumped the `@imwz/wp-pattern-sentinel` pattern-validation dependency to `^1.2.2` (dev tooling only, no runtime impact).
 
 = 1.0.3 =
 * Fixed: the GitHub release zip now wraps the theme in its own `ixian/` folder, so uploading it on WordPress 7.1.4 or later no longer installs the theme in a randomly named folder.

@@ -132,6 +132,27 @@ The `npm run validate*` scripts in `package.json` wrap the same `sentinel` binar
 all-patterns case; pass `--trellis ...` flags after `--` or add a local gitignored `.env`
 (`WP_URL`/`WP_USER`/`WP_PASS`) if you want to skip retyping them, matching Elayne's convention.
 
+Credentials gotcha on the demo: `--trellis` always logs in as `admin` with the vault password,
+and that password can mismatch the demo DB (pulled from production) — login then fails with
+"The password you entered for the username admin is incorrect". In that case drop `--trellis`
+(it overrides env vars) and pass credentials via env vars instead, running sentinel from a
+scratch directory (it writes `sentinel-<timestamp>.log.json` into the cwd). Do **not** add
+`--wp-subdir=wp` for a subsite — wp-login lives at the network `/wp/wp-login.php`, so the admin
+URL must stay `http://demo.imagewize.test/ixian`. If no working login exists, create a throwaway
+admin in the VM and delete it after (`--network`; usernames may not contain hyphens):
+
+```bash
+mkdir -p /tmp/ixian-sentinel && cd /tmp/ixian-sentinel
+WP_URL=http://demo.imagewize.test/ixian WP_USER=<user> WP_PASS=<pass> \
+  ~/code/ixian/node_modules/.bin/sentinel --log ~/code/ixian/patterns/
+
+# in the VM, via trellis:
+trellis vm shell --workdir /srv/www/demo.imagewize.com/current -- \
+  wp user create sentineltemp sentineltemp@demo.imagewize.test --role=administrator \
+  --url=demo.imagewize.test/ixian --user_pass=…
+# …and later: wp user delete sentineltemp --network --yes
+```
+
 ### Where docs and design mockups live
 
 **Not in this repo.** Planning documents, roadmaps and HTML design mockups belong in the
@@ -192,11 +213,8 @@ gitignored here if you want a local shortcut.
 **Once a change is merged to `main`, make the demo track it officially with `composer update`
 instead of (or in addition to) rsyncing** — rsync's copy doesn't survive a `composer install`, so
 skipping this step means the next full install silently reverts the demo to the old pinned
-commit. The demo's `demo/composer.json` currently pins Ixian as `"imagewize/ixian": "dev-main"`
-(a private repo with no tags yet — this moves to a real version constraint on Ixian's first
-tagged release; see the "Update Elayne to 4.9.0 and add Ixian as a dev dependency" commit in
-`imagewize.com` for why), so `composer update` pulls whatever is currently on `main`, not a
-built release artifact:
+commit. The demo's `demo/composer.json` pins Ixian as `"imagewize/ixian": "^1.0"` against the GitHub
+repo, so `composer update imagewize/ixian` pulls the newest tagged release:
 
 ```bash
 cd ~/code/imagewize.com/demo
@@ -251,7 +269,9 @@ When updating the theme version, update **four files** in sync:
 
 `style.css` is the version WordPress actually reads, and the only one that affects an installed
 site; the other three keep the repo, the WP.org listing and the release tooling honest. Check all
-four before tagging.
+four before tagging. When the bump is a compatibility claim, raise `Tested up to` in `style.css`
+and `readme.txt` in the same release — but only after the demo subsite has verified the new
+WordPress version (see "Testing on the demo site").
 
 ## Git Commit Guidelines
 
