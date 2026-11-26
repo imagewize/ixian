@@ -37,14 +37,15 @@ from the Aludra block library.
 - `composer install` then `composer run lint` / `composer run wpcs:scan` / `composer run wpcs:fix`.
 - Regenerate translations when strings change: `wp i18n make-pot . languages/ixian.pot`.
 - **Testing unreleased changes: sync, don't release.** The theme is a pinned Composer dependency
-  on the local demo site (`~/code/imagewize.com/demo`, subsite
-  `http://demo.imagewize.test/ixian/`), not a symlink.
-  
+  on the local demo site (`~/code/imagewize.com/demo`, a Bedrock multisite — the theme's subsite
+  is `http://demo.imagewize.test/ixian/`), not a symlink. All local paths below use `~/code` —
+  every machine clones into its own home, so never hardcode `/Users/<name>/code`.
+
   Sync to the demo site by running this **from anywhere**, always passing the theme working copy
   as the explicit third (source) argument — do **not** `cd` into the demo site first:
   ```bash
-  SITE_ROOT=/Users/j/code/imagewize.com/demo/web/app \
-    bash ~/code/wp-ops/scripts/sync/rsync-package-to-site.sh theme ixian /Users/j/code/ixian
+  SITE_ROOT=~/code/imagewize.com/demo/web/app \
+    bash ~/code/wp-ops/scripts/sync/rsync-package-to-site.sh theme ixian ~/code/ixian
   ```
 
   **Critical — omitting that source argument wipes the theme.** The script defaults the source to
@@ -52,9 +53,43 @@ from the Aludra block library.
   `themes/ixian/` and, because the sync uses `--delete --delete-excluded`, deletes the real
   theme. Preview with `--dry-run` (before the `theme` argument) when unsure; if it shows deletions
   of WordPress core (`web/wp/...`) or Bedrock files (`.env`, `config/`), the source is wrong — stop.
-  `composer update` on that site restores the released version. See CLAUDE.md → *Testing on the
-  demo site* for the canonical, fuller version of this workflow (keep the two in step).
-  Do not commit a sync script here — Theme Check rejects a theme that ships a `.sh` file.
+  The expected deletions are only dist-excluded dev files (`composer.json`, `package.json`,
+  `README.md`, …). `composer update` on that site restores the released version. See CLAUDE.md →
+  *Testing on the demo site* for the canonical, fuller version of this workflow (keep the two in
+  step). Do not commit a sync script here — Theme Check rejects a theme that ships a `.sh` file.
+- **Local testing on the demo subsite** (`http://demo.imagewize.test/ixian/`):
+  - The demo is a Bedrock multisite served by the `imagewize.com` Lima VM. WP-CLI does **not**
+    reach the database from the host — run it inside the VM against the Trellis path, scoped to
+    the subsite:
+    ```bash
+    limactl shell imagewize.com -- bash -c \
+      'cd /srv/www/demo.imagewize.com/current && wp core version --url=demo.imagewize.test/ixian'
+    ```
+    (the demo VM tracks the upcoming release — currently 7.2-RC3). From the host, `wp-cli.yml`
+    in `~/code/imagewize.com/demo` only covers file-based commands (`wp core version`).
+  - Render checks: `curl -s -o /dev/null -w "%{http_code}\n" http://demo.imagewize.test/ixian/…`
+    for each page (home, about, contact, pricing, portfolio) and grep the HTML for
+    `Fatal error|Parse error|Warning:|Deprecated:|Notice:` — the subsite must render 200 with no
+    PHP noise.
+  - Pattern validation with wp-pattern-sentinel (pinned in `package.json`, `npm run validate`).
+    Run it **from a scratch directory**, not the repo root — it writes `sentinel-<timestamp>.log.json`
+    into the cwd. Credentials: `--trellis --trellis-dir=~/code/imagewize.com/trellis
+    --site=demo.imagewize.com --subsite=ixian` works for the URL, but its vault `admin` password
+    can mismatch the demo DB (pulled from production) — then pass credentials via env vars
+    instead (CLI `--pass` lands in shell history; `--trellis` would override env vars, so drop it):
+    ```bash
+    mkdir -p /tmp/ixian-sentinel && cd /tmp/ixian-sentinel
+    WP_URL=http://demo.imagewize.test/ixian WP_USER=<user> WP_PASS=<pass> \
+      ~/code/ixian/node_modules/.bin/sentinel --log ~/code/ixian/patterns/
+    ```
+    Do **not** add `--wp-subdir=wp` for a subsite: wp-login lives at the network `/wp/wp-login.php`,
+    so the admin URL must stay `http://demo.imagewize.test/ixian`. If no working login exists, create
+    a throwaway admin inside the VM and delete it after (`--network`):
+    `limactl shell imagewize.com -- bash -c 'cd /srv/www/demo.imagewize.com/current && wp user create sentineltemp sentineltemp@demo.imagewize.test --role=administrator --url=demo.imagewize.test/ixian --user_pass=… && wp user delete sentineltemp --network --yes'`
+    (usernames may not contain hyphens).
+  - When compatibility with a new WP version is confirmed on the demo subsite, raise
+    `Tested up to` in `style.css` and `readme.txt` together with the next version bump (see
+    *Version Management* below) — don't ship a release claiming a WP version nobody tested.
 - **Releases** are packaged by `.github/workflows/create-release.yml` (`zip -x@.distignore`) on
   publish. Keep `.distignore` and `.gitattributes` (`export-ignore`) in step so the release zip
   and source archives contain the same files.
