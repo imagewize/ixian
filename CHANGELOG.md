@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-26
+
+### Changed
+- **`Tested up to` raised to WordPress 7.2.** Verified on the demo subsite
+  (`http://demo.imagewize.test/ixian/`) running 7.2-RC3: every template renders 200 with no PHP
+  notices, and all five `patterns/page-*.php` validate in the 7.2 editor with zero
+  block-validation errors. (Sentinel reports `content_mismatch` on all five because WP 7.2's
+  serializer reorders HTML attributes and escapes `&` in block-comment JSON — semantically
+  equivalent, so the pattern files are unchanged and keep parsing correctly on WP ≤ 7.1.)
+- **`@imwz/wp-pattern-sentinel` bumped `^1.1.4` → `^1.2.2`** (matching Elayne; stays in
+  `dependencies`). Validation tooling only — nothing a production site runs.
+
 ## [1.0.3] - 2026-11-12
 
 ### Fixed
